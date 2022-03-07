@@ -15,3 +15,12 @@
     transition: all 0.3s;
 }
 
+#homeSubmenu {
+    text-align: center;
+
+}
+
+.btn-secondary {
+    background-color: darkslateblue !important;
+
+}
