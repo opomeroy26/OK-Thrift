@@ -9,3 +9,6 @@
     color: #fff;
     transition: all 0.3s;
 }
+.bg-secondary {
+    background-color: #7386D5 !important;
+}
