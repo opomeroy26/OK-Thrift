@@ -11,7 +11,7 @@
         "id": 2,
         "image": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80" ,
         "item-name": "bomber jacket" ,
-        "price": "12.99" ,
+        "price": "$12.99" ,
         "description":"Orange jacket. Small hole in right pocket."
     },
     {
@@ -60,14 +60,14 @@
         "id": 9,
         "image":"https://images.unsplash.com/photo-1615424902876-df124220b0b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=327&q=80" ,
         "item-name": "Shoes" ,
-        "price":"29.00" ,
+        "price":"$29.00" ,
         "description":"Never been worn Nike shoes. Size 8 womens."
     },
     {
         "id": 10,
         "image":"https://images.unsplash.com/photo-1643226354613-260043e30011?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=371&q=80" ,
         "item-name":"Shoes" ,
-        "price":"31.00" ,
+        "price":"$31.00" ,
         "description":"New men's boots. Size 11. Never been worn"
     }
 ]
