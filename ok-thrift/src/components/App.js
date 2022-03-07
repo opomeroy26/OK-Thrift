@@ -1,10 +1,13 @@
-import SideBar from './SideBar'
+
+import Header from "./Header";
+import SideBar from "./SideBar";
 
 
 function App() {
   return (
     <div className="App">
-      <SideBar> </SideBar>
+      <Header />
+      <SideBar /> 
     </div>
   );
 }
