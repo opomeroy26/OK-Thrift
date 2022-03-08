@@ -6,7 +6,7 @@ import '../styles/index.css'
 function SideBar(){
     return (
         
-            <div>
+            
             <nav id='sidebar' >
                 <h1 >OK Thrift</h1>
                 <ul className='list-unstyled components' id='homeSubmenu'>
@@ -27,7 +27,7 @@ function SideBar(){
                 </li>
                 </ul>
             </nav>
-            </div>
+            
         
     )
 }

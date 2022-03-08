@@ -13,7 +13,7 @@ function CartPage({cart, onRemoveFromCart, onCardClick,}){
         </div>
     ))
     return (
-        <div className='row' id='cart'>
+        <div className='row d-flex justify-content-center' id='cart'>
             {cartItem}
         </div>
 
