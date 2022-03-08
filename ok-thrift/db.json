@@ -69,27 +69,7 @@
       "name": "Shoes",
       "price": "$31.00",
       "description": "New men's boots. Size 11. Never been worn"
-    },
-    {
-      "image": "https://media.karousell.com/media/photos/products/2020/9/29/band_shirt_blink_182_1601404603_af1b8b59.jpg",
-      "name": "blink 182 tee",
-      "price": "10",
-      "description": "super sick blink tee. only worn a few times, mens large.",
-      "id": 11
-    },
-    {
-      "image": "https://process.fs.grailed.com/AJdAgnqCST4iPtnUxiGtTz/auto_image/cache=expiry:max/rotate=deg:exif/output=quality:70/compress/https://cdn.fs.grailed.com/api/file/j665PxykQMGUCjgvde7k",
-      "name": "kiss tee",
-      "price": "10",
-      "description": "killer kiss tee, vintage. mens large.",
-      "id": 12
-    },
-    {
-      "image": "https://process.fs.grailed.com/AJdAgnqCST4iPtnUxiGtTz/auto_image/cache=expiry:max/rotate=deg:exif/output=quality:70/compress/https://cdn.fs.grailed.com/api/file/j665PxykQMGUCjgvde7k",
-      "name": "kiss tee",
-      "price": "10",
-      "description": "killer kiss tee, vintage. mens large.",
-      "id": 13
     }
+    
   ]
 }

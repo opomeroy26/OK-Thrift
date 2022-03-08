@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import '../styles/ProfilePage.css'
 
 
@@ -33,18 +33,15 @@ function ProfilePage({ onAddToInventory }){
                 body: JSON.stringify(formData),
             })
             .then(onAddToInventory(formData)
-            .then(handleFormReset()))
-        
-        
+            .then( setImage(''),
+                    setName(''),
+                    setPrice(''),
+                    setDescription('')
+            )
+        )  
     }
     
-    function handleFormReset(){
-        setImage('')
-        setName('')
-        setPrice('')
-        setDescription('')
-    }
-    
+   
     
     
     
