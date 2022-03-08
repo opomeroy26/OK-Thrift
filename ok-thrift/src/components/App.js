@@ -17,7 +17,7 @@ function App() {
   const [detail, setDetail] = useState([])
 
   useEffect(()=> {
-    fetch("http://localhost:3001/inventory")
+    fetch("http://localhost:3000/inventory")
     .then((resp) => resp.json())
     .then(setInventory)
   }, [])

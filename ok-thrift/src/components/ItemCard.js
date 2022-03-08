@@ -10,9 +10,9 @@ function ItemCard({product, handleAddToCart, handleCardClick,}) {
         <div className="card-body h-100">
             <h5 className="card-title">{name}</h5>
             <p className="card-text">{description}</p>
-            <span className="price">{price}</span>
+            <p className="price">{price}</p>
             <button onClick={(e)=> handleAddToCart(e, product)} className="btn btn-secondary">Add to Cart 🛒 </button>
-        </div>
+        </div> 
     </div>
 );
 }
