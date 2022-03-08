@@ -13,6 +13,7 @@ function App() {
   const [inventory, setInventory] = useState([])
   const [cart, setCart] = useState([])
   const history = useHistory();
+  const [detail, setDetail] = useState([])
 
   useEffect(()=> {
     fetch("http://localhost:3001/inventory")
@@ -34,8 +35,26 @@ function App() {
     setCart(cart.filter((cartItem)=> cartItem !== product))
   }
 
-  function onCardClick(product){
+  function onHomeCardClick(product){
     console.log("Show Details of this product", product)
+    history.push("/detail")
+    setDetail([product])
+  }
+
+  function onCartCardClick(product){
+    console.log("Show Details of this Cart product", product)
+    history.push("/detail")
+    setDetail([product])
+  }
+
+  function onReturnToHomeClick(){
+    history.push("/")
+
+  }
+
+  function onReturnToCartClick(){
+    history.push("/cart")
+
   }
 
   function onAddToInventory(product){
@@ -59,7 +78,7 @@ function App() {
           <HomePage 
             inventory={inventory} 
             onAddToCart = {onAddToCart}
-            onCardClick = {onCardClick}
+            onCardClick = {onHomeCardClick}
           />
         </Route>
       
@@ -67,12 +86,19 @@ function App() {
           <CartPage 
             cart={cart}
             onRemoveFromCart = {onRemoveFromCart}
-            onCardClick= {onCardClick}
+            onCardClick= {onCartCardClick}
           />
         </Route>
       
         <Route exact path="/detail">
-          <DetailPage />
+          <DetailPage 
+            detail={detail}
+            handleReturnToHome = {onReturnToHomeClick}
+            handleReturnToCart = {onReturnToCartClick}
+            onAddToCart = {onAddToCart}
+            onRemoveFromCart = {onRemoveFromCart}
+            
+          />
         </Route>
 
         <Route exact path="/profile">

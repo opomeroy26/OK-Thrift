@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ItemCard({product, handleAddToCart, handleCardClick}) {
+function ItemCard({product, handleAddToCart, handleCardClick,}) {
     const {name, description, price, image} = product
 
     return (
