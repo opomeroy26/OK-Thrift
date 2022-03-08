@@ -1,7 +1,7 @@
 
 function ProfilePage(){
     return (
-        <div className='bg-info container p-auto'>
+        <div className='bg-info container '>
             <h1 >PROFILE PAGE</h1>
         </div>
     )
