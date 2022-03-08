@@ -12,11 +12,11 @@ function App() {
     <div className="container-fluid" >
       
     
-      <div className='row nopadding'>
-      <div className='col-2 sidebar nopadding'>
+      <div className='row '>
+      <div className='col-4 sidebar'>
         <SideBar /> 
       </div>
-      <div className='col-10 switch '>
+      <div className='col-8 switch p-2 ml-30 '>
       <Switch>
         <Route exact path="/">
           <HomePage />
