@@ -11,16 +11,16 @@ function App() {
   return (
     <div className="container-fluid" >
       <div className='row'>
-        
-          <Header />
-        
+        <div className='col h-100'>
+         <Header />
+        </div>
       </div>
       
       <div className='row'>
-      <div className='col-6 sidebar'>
+      <div className='col-2 sidebar'>
         <SideBar /> 
       </div>
-      <div className='col-6 switch'>
+      <div className='col-10 switch'>
       <Switch>
         <Route exact path="/">
           <HomePage />
