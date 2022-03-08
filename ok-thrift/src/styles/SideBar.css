@@ -6,7 +6,7 @@
 #sidebar {
     
     margin-right:50px;
-    
+    width:200px;
     position: fixed;
     left: 0;
     height: auto;
