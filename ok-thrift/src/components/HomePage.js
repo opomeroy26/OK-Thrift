@@ -1,8 +1,16 @@
+import ItemCard from './ItemCard.js'
 
 function HomePage(){
     return (
-        <div>
-            <h1>HOMEPAGE</h1>
+        <div className='row' id='items'>
+            <ItemCard />
+            <ItemCard />
+            <ItemCard />
+            <ItemCard />
+            <ItemCard />
+            <ItemCard />
+            <ItemCard />
+            <ItemCard />
         </div>
     )
 }

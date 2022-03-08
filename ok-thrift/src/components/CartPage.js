@@ -1,8 +1,14 @@
+import CartCard from './CartCard.js'
+import '../styles/CartPage.css'
 
 function CartPage(){
     return (
-        <div>
-            <h1>CARTPAGE</h1>
+        <div id='cart'>
+            <CartCard />
+            <CartCard />
+            <CartCard />
+            <CartCard />
+            <CartCard />
         </div>
 
     )

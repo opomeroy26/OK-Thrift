@@ -1,5 +1,5 @@
 import {Switch, Route} from "react-router-dom"
-import Header from "./Header";
+//import Header from "./Header";
 import SideBar from "./SideBar";
 import HomePage from "./HomePage";
 import CartPage from "./CartPage";
@@ -10,17 +10,13 @@ import '../styles/index.css'
 function App() {
   return (
     <div className="container-fluid" >
-      <div className='row nopadding'>
-      <div className='col h-100 nopadding no-gutters'>
-         <Header />
-        </div>
-      </div>
       
+    
       <div className='row nopadding'>
-      <div className='col-2 sidebar nopadding no-gutters'>
+      <div className='col-2 sidebar nopadding'>
         <SideBar /> 
       </div>
-      <div className='col-10 switch nopadding no-gutters'>
+      <div className='col-10 switch '>
       <Switch>
         <Route exact path="/">
           <HomePage />
