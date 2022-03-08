@@ -1,5 +1,6 @@
 import {Switch, Route} from "react-router-dom"
 import React, {useEffect, useState} from "react";
+import {useHistory} from "react-router-dom";
 //import Header from "./Header";
 import SideBar from "./SideBar";
 import HomePage from "./HomePage";
@@ -11,6 +12,7 @@ import '../styles/index.css'
 function App() {
   const [inventory, setInventory] = useState([])
   const [cart, setCart] = useState([])
+  const history = useHistory();
 
   useEffect(()=> {
     fetch("http://localhost:3001/inventory")
@@ -23,6 +25,8 @@ function App() {
     if (!cart.includes(product)) {
       setCart([...cart, product])
     }
+    history.push("/cart")
+
   }
 
   function onRemoveFromCart(e, product){
