@@ -2,6 +2,7 @@ import '../styles/SideBar.css'
 import {NavLink} from "react-router-dom"
 import '../styles/index.css'
 
+
 function SideBar(){
     return (
         
@@ -10,17 +11,17 @@ function SideBar(){
                 <h1 >OK Thrift</h1>
                 <ul className='list-unstyled components' id='homeSubmenu'>
                 <li>
-                <NavLink  to="/" className='btn btn-secondary m-3'>
+                <NavLink  to="/" exact activeStyle = {{background: "white", color:"#7386D5"}} className='btn btn-secondary m-3'>
                     Home
                 </NavLink>
                 </li>
                 <li>
-                <NavLink to ="/cart" className='btn btn-secondary m-3'>
+                <NavLink to ="/cart" exact activeStyle = {{background: "white", color:"#7386D5"}} className='btn btn-secondary m-3'>
                     Cart
                 </NavLink>
                 </li>
                 <li>
-                <NavLink to="/profile" className='btn btn-secondary m-3'>
+                <NavLink to="/profile" exact activeStyle = {{background: "white", color:"#7386D5"}} className='btn btn-secondary m-3'>
                     Profile
                 </NavLink>
                 </li>
