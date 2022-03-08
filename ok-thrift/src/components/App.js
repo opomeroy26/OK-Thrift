@@ -1,4 +1,5 @@
 import {Switch, Route} from "react-router-dom"
+import React, {useEffect, useState} from "react";
 //import Header from "./Header";
 import SideBar from "./SideBar";
 import HomePage from "./HomePage";
@@ -8,6 +9,14 @@ import ProfilePage from "./ProfilePage";
 import '../styles/index.css'
 
 function App() {
+  const [inventory, setInventory] = useState([])
+
+  useEffect(()=> {
+    fetch("http://localhost:3000/inventory")
+    .then((resp) => resp.json())
+    .then(setInventory)
+  }, [])
+
   return (
     <div className="container-fluid" >
       
@@ -19,7 +28,7 @@ function App() {
       <div className='col-10 switch '>
       <Switch>
         <Route exact path="/">
-          <HomePage />
+          <HomePage inventory={inventory}/>
         </Route>
       
         <Route exact path="/cart">
