@@ -10,12 +10,20 @@ import '../styles/index.css'
 
 function App() {
   const [inventory, setInventory] = useState([])
+  const [cart, setCart] = useState([])
 
   useEffect(()=> {
     fetch("http://localhost:3000/inventory")
     .then((resp) => resp.json())
     .then(setInventory)
   }, [])
+
+  function onAddToCart(product){
+    console.log("Add to cart", product)
+    if (!cart.includes(product)) {
+      setCart([...cart, product])
+    }
+  }
 
   return (
     <div className="container-fluid" >
@@ -28,11 +36,13 @@ function App() {
       <div className='col-10 switch '>
       <Switch>
         <Route exact path="/">
-          <HomePage inventory={inventory}/>
+          <HomePage 
+            inventory={inventory} 
+            onAddToCart = {onAddToCart}/>
         </Route>
       
         <Route exact path="/cart">
-          <CartPage />
+          <CartPage cart={cart}/>
         </Route>
       
         <Route exact path="/detail">
