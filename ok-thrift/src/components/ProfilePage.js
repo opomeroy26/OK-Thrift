@@ -102,7 +102,7 @@ function ProfilePage({ onAddToInventory }){
                             onChange={handleDescriptionChange}>
                         </input>
                     </div>
-                    <button type='submit' class='btn btn-primary'>Add Listing</button>
+                    <button type='submit' class='btn btn-secondary'>Add Listing</button>
                 </form>
             </div>
             <div id='currentListings'>
