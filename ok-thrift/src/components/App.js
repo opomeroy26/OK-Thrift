@@ -18,15 +18,20 @@ function App() {
     .then(setInventory)
   }, [])
 
-  function onAddToCart(product){
+  function onAddToCart(e, product){
+    e.stopPropagation();
     if (!cart.includes(product)) {
       setCart([...cart, product])
     }
   }
 
-  function onRemoveFromCart(product){
-    console.log("Remove from cart", product)
+  function onRemoveFromCart(e, product){
+    e.stopPropagation();
     setCart(cart.filter((cartItem)=> cartItem !== product))
+  }
+
+  function onCardClick(product){
+    console.log("Show Details of this product", product)
   }
 
 
@@ -44,6 +49,7 @@ function App() {
           <HomePage 
             inventory={inventory} 
             onAddToCart = {onAddToCart}
+            onCardClick = {onCardClick}
           />
         </Route>
       
@@ -51,6 +57,7 @@ function App() {
           <CartPage 
             cart={cart}
             onRemoveFromCart = {onRemoveFromCart}
+            onCardClick= {onCardClick}
           />
         </Route>
       
