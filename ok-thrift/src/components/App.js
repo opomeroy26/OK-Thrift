@@ -9,8 +9,8 @@ import '../styles/index.css'
 
 function App() {
   return (
-    <div className="container-fluid" >
-      <div className='row'>
+    <div className="container-fluid">
+      <div className='row clearfix'>
         
           <Header />
         
