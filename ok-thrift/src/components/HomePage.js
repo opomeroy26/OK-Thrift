@@ -1,12 +1,13 @@
 import ItemCard from './ItemCard.js'
 
-function HomePage({inventory, onAddToCart}){
+function HomePage({inventory, onAddToCart, onCardClick}){
     const product = inventory.map((productObj)=> (
         <div>
             <ItemCard 
                 key={productObj.id + productObj.name}
                 product={productObj}
                 handleAddToCart = {onAddToCart}
+                handleCardClick = {onCardClick}
             />
         </div>
     ))
