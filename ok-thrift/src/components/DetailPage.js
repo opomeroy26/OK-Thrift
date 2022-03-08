@@ -1,32 +1,26 @@
 import React from 'react';
-import ItemCard from "./ItemCard";
-import CartCard from "./CartCard";
+import DetailCard from "./DetailCard";
 
-function DetailPage({detail, handleReturnToHome, handleReturnToCart, onAddToCart, onRemoveFromCart}){
-    const itemDetail = detail.map((detailObj)=> (
+function DetailPage({detail, handleReturnToHome, onAddToCart, handleReturnToCart}){
+    const detailItem = detail.map((productObj)=> (
         <div>
-            <ItemCard 
-                key={detailObj.id}
-                product={detailObj}
-                handleAddToClick = {onAddToCart}
+            <DetailCard
+                key={productObj.id + productObj.name}
+                product={productObj}
+                handleAddToCart={onAddToCart}
             />
-            {/* <CartCard
-                key={detailObj.id}
-                product = {detailObj}
-                handleRemoveFromCart = {onRemoveFromCart}
-            /> */}
-
         </div>
     ))
-
+    
     return (
         <div id='cart'>
-            <h1>Detail Page</h1>
-            <button onClick={() => handleReturnToHome()} className="btn btn-secondary">Return to Home </button>
-            <button onClick={() => handleReturnToCart()} className="btn btn-secondary">Return to Cart </button>
-            {itemDetail}
+            {detailItem}
+            <button onClick={() => handleReturnToHome()} className="btn btn-secondary">Continue Shopping </button>
         </div>
     )
 }
 
 export default DetailPage;
+
+
+    

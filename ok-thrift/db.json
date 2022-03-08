@@ -3,30 +3,30 @@
     {
       "id": 1,
       "image": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=405&q=80",
-      "name": "poncho",
+      "name": "Poncho",
       "price": "$10.80",
-      "description": "Cream colored poncho. In good condition. Only been worn once"
+      "description": "Cream-colored women's poncho. In good condition. Only been worn once. Slightly see through." 
     },
     {
       "id": 2,
       "image": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80",
-      "name": "bomber jacket",
+      "name": "Bomber jacket",
       "price": "$12.99",
-      "description": "Orange jacket. Small hole in right pocket."
+      "description": "Orange jacket. Small hole in right pocket. Size medium."
     },
     {
       "id": 3,
       "image": "https://images.unsplash.com/photo-1564584217132-2271feaeb3c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
       "name": "T-shirt",
       "price": "$4.00",
-      "description": "Blue men's T-shirt. Slighty used."
+      "description": "Blue men's T-shirt, though could be unisex. Slighty used. Size medium but fits slightly tighter. "
     },
     {
       "id": 4,
       "image": "https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1494496195158-c3becb4f2475%3Fixlib%3Drb-1.2.1%26ixid%3DMnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8%26auto%3Dformat%26fit%3Dcrop%26w%3D1170%26q%3D80",
       "name": "Shoes",
       "price": "$24.00",
-      "description": "High-top converse tennis-shoes. Size 10. Good condition."
+      "description": "High-top converse tennis-shoes. Size 10. Good condition, some wear and skids on sole but no holes."
     },
     {
       "id": 5,
@@ -40,7 +40,7 @@
       "image": "https://images.unsplash.com/photo-1543076447-215ad9ba6923?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
       "name": "Jean Jacket",
       "price": "$28.00",
-      "description": "Uni-sex blue jean jacket. Sherpa interior. Brand new, never worn."
+      "description": "Uni-sex blue jean jacket. Sherpa interior. Brand new, never worn. Size medium but fits bigger."
     },
     {
       "id": 7,
@@ -54,7 +54,7 @@
       "image": "https://images.unsplash.com/photo-1611312449412-6cefac5dc3e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=392&q=80",
       "name": "Flannel",
       "price": "$9.00",
-      "description": "Uni-sex black and gray checkered, cotton flannel. In good condition."
+      "description": "Uni-sex black and gray checkered, cotton flannel. In good condition. Size medium."
     },
     {
       "id": 9,
@@ -68,7 +68,7 @@
       "image": "https://images.unsplash.com/photo-1643226354613-260043e30011?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=371&q=80",
       "name": "Shoes",
       "price": "$31.00",
-      "description": "New men's boots. Size 11. Never been worn"
+      "description": "New men's boots. Size 11. Never been worn."
     }
   ]
 }
