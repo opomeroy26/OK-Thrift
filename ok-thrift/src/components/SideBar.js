@@ -6,6 +6,7 @@ function SideBar(){
     return (
         <div className='col wrapper nopadding'>
             <nav id='sidebar' className='nopadding'>
+                <h1>OK Thrift</h1>
                 <ul className='list-unstyled components' id='homeSubmenu'>
                 <li>
                 <NavLink  to="/" className='btn btn-secondary m-3'>

@@ -4,7 +4,7 @@ function ItemCard({inventory}) {
     // const {name, description, price, image} = inventory
 
     return (
-     <div className="card" style="width: 18rem;">
+     <div className="card col-5 m-1 p-1" >
          <img className="card-img-top" src="image" alt= "name"/>
         <div className="card-body">
             <h5 className="card-title">"name"</h5>
