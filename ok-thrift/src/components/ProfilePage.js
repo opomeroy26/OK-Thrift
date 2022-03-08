@@ -1,7 +1,53 @@
+import { useState, useEffect } from 'react'
 import '../styles/ProfilePage.css'
 
 
-function ProfilePage(){
+function ProfilePage({ onAddToInventory }){
+    const [image, setImage] = useState("")
+    const [name, setName] = useState("")
+    const [price, setPrice] = useState("")
+    const [description, setDescription] = useState("")
+
+    function handleImageChange(event) {
+        setImage(event.target.value)
+        
+    }
+    function handleNameChange(event) {
+        setName(event.target.value)
+    }
+    function handlePriceChange(event) {
+        setPrice(event.target.value)
+    }
+    function handleDescriptionChange(event) {
+        setDescription(event.target.value)
+    }
+  
+    function handleSubmit(event){
+        event.preventDefault()
+        const formData ={image: image, name: name, price: price, description: description}
+            fetch('http://localhost:3001/inventory', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+            .then(onAddToInventory(formData)
+            .then(handleFormReset()))
+        
+        
+    }
+    
+    function handleFormReset(){
+        setImage('')
+        setName('')
+        setPrice('')
+        setDescription('')
+    }
+    
+    
+    
+    
     return (
         <div className='container p-3 m-3' id='profile'>
             <img src ='https://static9.depositphotos.com/1009634/1075/v/450/depositphotos_10757374-stock-illustration-no-user-profile-picture.jpg' alt='profile'></img>
@@ -13,7 +59,7 @@ function ProfilePage(){
                 non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
             </h5> {/*Should also be dynamic */}
             <div id='newItemForm'>
-                <form>
+                <form id='form' onSubmit={handleSubmit}>
                     <div className='form-group'>
                         <label for='image'>Image</label>
                         <input 
@@ -21,6 +67,8 @@ function ProfilePage(){
                             className='form-control' 
                             id='image' 
                             placeholder='Please enter a image URL'
+                            value={image}
+                            onChange={handleImageChange}
                             >
                         </input>
                     </div>
@@ -30,7 +78,9 @@ function ProfilePage(){
                             type='text'
                             className='form-control'
                             id='name'
-                            placeholder='What are you trying to sell?'>
+                            placeholder='What are you trying to sell?'
+                            value={name}
+                            onChange={handleNameChange}>
                         </input>
                     </div>
                     <div className='form-group'>
@@ -39,7 +89,9 @@ function ProfilePage(){
                             type='text'
                             className='form-control'
                             id='price'
-                            placeholder='$'>
+                            placeholder='$'
+                            value={price}
+                            onChange={handlePriceChange}>
                         </input>
                     </div>
                     <div class='form-group'>
@@ -48,7 +100,9 @@ function ProfilePage(){
                             type='text'
                             class='form-control'
                             id='description'
-                            placeholder='enter a brief desription about your item'>
+                            placeholder='enter a brief desription about your item'
+                            value={description}
+                            onChange={handleDescriptionChange}>
                         </input>
                     </div>
                     <button type='submit' class='btn btn-primary'>Add Listing</button>

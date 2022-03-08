@@ -13,7 +13,7 @@ function App() {
   const [cart, setCart] = useState([])
 
   useEffect(()=> {
-    fetch("http://localhost:3000/inventory")
+    fetch("http://localhost:3001/inventory")
     .then((resp) => resp.json())
     .then(setInventory)
   }, [])
@@ -32,6 +32,12 @@ function App() {
 
   function onCardClick(product){
     console.log("Show Details of this product", product)
+  }
+
+  function onAddToInventory(product){
+    setInventory([...inventory, product])
+
+    
   }
 
 
@@ -66,7 +72,7 @@ function App() {
         </Route>
 
         <Route exact path="/profile">
-          <ProfilePage />
+          <ProfilePage onAddToInventory={onAddToInventory}/>
         </Route>
       </Switch>
       </div>
