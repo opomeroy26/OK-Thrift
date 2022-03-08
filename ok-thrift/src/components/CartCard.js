@@ -11,7 +11,7 @@ function CartCard({product, handleRemoveFromCart, handleCardClick}) {
                     <h5 className="card-title">{name}</h5>
                     <p className="card-text">{description}</p>
                     <span className="price">{price}</span>
-                    <button onClick={(e)=>handleRemoveFromCart(e, product)} className="btn btn-primary">Remove From Cart</button>
+                    <button onClick={(e)=>handleRemoveFromCart(e, product)} className="btn btn-secondary">Remove From Cart</button>
                 </div>
             </div>
        </div>
