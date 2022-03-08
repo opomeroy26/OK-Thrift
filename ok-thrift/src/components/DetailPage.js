@@ -1,6 +1,10 @@
 
 function DetailPage(){
-    console.log("Detail Page")
+    return (
+        <div>
+            <h1>Detail Page</h1>
+        </div>
+    )
 }
 
 export default DetailPage;
