@@ -13,7 +13,7 @@ function CartPage({cart, onRemoveFromCart, onCardClick,}){
         </div>
     ))
     return (
-        <div id='cart'>
+        <div className='row' id='cart'>
             {cartItem}
         </div>
 
