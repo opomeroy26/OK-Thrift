@@ -1,7 +1,6 @@
 import {Switch, Route} from "react-router-dom"
 import React, {useEffect, useState} from "react";
 import {useHistory} from "react-router-dom";
-//import Header from "./Header";
 import SideBar from "./SideBar";
 import HomePage from "./HomePage";
 import CartPage from "./CartPage";
@@ -14,7 +13,7 @@ function App() {
   const [inventory, setInventory] = useState([])
   const [cart, setCart] = useState([])
   const history = useHistory();
-  const [detail, setDetail] = useState([])
+  const [homeItemdetail, setHomeItemDetail] = useState([])
 
   useEffect(()=> {
     fetch("http://localhost:3000/inventory")
@@ -37,15 +36,8 @@ function App() {
   }
 
   function onHomeCardClick(product){
-    console.log("Show Details of this product", product)
     history.push("/detail")
-    setDetail([product])
-  }
-
-  function onCartCardClick(product){
-    console.log("Show Details of this Cart product", product)
-    history.push("/detail")
-    setDetail([product])
+    setHomeItemDetail([product])
   }
 
   function onReturnToHomeClick(){
@@ -53,15 +45,9 @@ function App() {
 
   }
 
-  function onReturnToCartClick(){
-    history.push("/cart")
-
-  }
-
   function onAddToInventory(product){
     setInventory([...inventory, product])
 
-    
   }
 
 
@@ -87,15 +73,14 @@ function App() {
           <CartPage 
             cart={cart}
             onRemoveFromCart = {onRemoveFromCart}
-            onCardClick= {onCartCardClick}
+            handleReturnToHome = {onReturnToHomeClick}
           />
         </Route>
       
         <Route exact path="/detail">
           <DetailPage 
-            detail={detail}
+            detail={homeItemdetail}
             handleReturnToHome = {onReturnToHomeClick}
-            handleReturnToCart = {onReturnToCartClick}
             onAddToCart = {onAddToCart}
             onRemoveFromCart = {onRemoveFromCart}
             
