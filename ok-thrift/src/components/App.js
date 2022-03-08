@@ -19,11 +19,16 @@ function App() {
   }, [])
 
   function onAddToCart(product){
-    console.log("Add to cart", product)
     if (!cart.includes(product)) {
       setCart([...cart, product])
     }
   }
+
+  function onRemoveFromCart(product){
+    console.log("Remove from cart", product)
+    setCart(cart.filter((cartItem)=> cartItem !== product))
+  }
+
 
   return (
     <div className="container-fluid" >
@@ -38,11 +43,15 @@ function App() {
         <Route exact path="/">
           <HomePage 
             inventory={inventory} 
-            onAddToCart = {onAddToCart}/>
+            onAddToCart = {onAddToCart}
+          />
         </Route>
       
         <Route exact path="/cart">
-          <CartPage cart={cart}/>
+          <CartPage 
+            cart={cart}
+            onRemoveFromCart = {onRemoveFromCart}
+          />
         </Route>
       
         <Route exact path="/detail">

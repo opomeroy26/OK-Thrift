@@ -1,6 +1,6 @@
 import React from 'react'
 
-function CartCard({product}) {
+function CartCard({product, handleRemoveFromCart}) {
     const {image, name, description, price} = product
     
     return (
@@ -11,7 +11,7 @@ function CartCard({product}) {
                     <h5 className="card-title">{name}</h5>
                     <p className="card-text">{description}</p>
                     <span className="price">{price}</span>
-                    <button className="btn btn-primary">Remove From Cart</button>
+                    <button onClick={()=>handleRemoveFromCart(product)} className="btn btn-primary">Remove From Cart</button>
                 </div>
             </div>
        </div>
