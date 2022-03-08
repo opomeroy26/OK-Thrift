@@ -3,6 +3,11 @@
 }
 
 
+.profile-image {
+  width:400px;
+  height:400px;
+}
+
 input [type=text] {
     padding:10px;
     border:none;
@@ -33,3 +38,5 @@ input [type=text] {
     color: #fff;
     transform: translateY(-7px);
   }
+
+  

@@ -13,7 +13,7 @@ function HomePage({inventory, onAddToCart, onCardClick}){
     ))
     
     return (
-        <div className='row' id='items'>
+        <div className='row content d-flex justify-content-center' id='items' >
             {product}
         </div>
     )

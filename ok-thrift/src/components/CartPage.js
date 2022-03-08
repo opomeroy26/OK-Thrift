@@ -12,7 +12,9 @@ function CartPage({cart, onRemoveFromCart, handleReturnToHome}){
         </div>
     ))
     return (
-        <div id='cart'>
+
+        <div className='row d-flex justify-content-center' id='cart'>
+
             {cartItem}
             <button onClick={() => handleReturnToHome()} className="btn btn-secondary">Continue Shopping </button>
         </div>

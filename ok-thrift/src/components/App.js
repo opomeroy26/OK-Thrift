@@ -16,7 +16,7 @@ function App() {
   const [homeItemdetail, setHomeItemDetail] = useState([])
 
   useEffect(()=> {
-    fetch("http://localhost:3000/inventory")
+    fetch("http://localhost:3001/inventory")
     .then((resp) => resp.json())
     .then(setInventory)
   }, [])
@@ -55,11 +55,10 @@ function App() {
     <div className="container-fluid" >
       
     
-      <div className='row '>
-      <div className='col-5 sidebar'>
+      
         <SideBar /> 
-      </div>
-      <div className='col-6 switch p-2 ml-30 '>
+      
+      <div className='content' style={{ marginLeft: '200px' }}>
       <Switch>
         <Route exact path="/">
           <HomePage 
@@ -92,7 +91,7 @@ function App() {
         </Route>
       </Switch>
       </div>
-      </div>
+      
       
     </div>
   );

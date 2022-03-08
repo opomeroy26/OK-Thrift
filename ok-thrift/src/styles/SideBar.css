@@ -9,11 +9,12 @@
     width:200px;
     position: fixed;
     left: 0;
+    top:0;
     height: auto;
     z-index: 999;
     background: #7386D5;
     color: #fff;
-    height:100vh;
+    height:100vh !important;
     text-align: center;
 }
 
