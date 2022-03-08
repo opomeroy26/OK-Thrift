@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="container-fluid" >
       <div className='row nopadding'>
-        <div className='col h-100 nopadding no-gutters'>
+      <div className='col h-100 nopadding no-gutters'>
          <Header />
         </div>
       </div>
