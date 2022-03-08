@@ -1,6 +1,5 @@
 import CartCard from './CartCard.js'
 import '../styles/CartPage.css'
-import ItemCard from './ItemCard.js'
 
 function CartPage({cart, onRemoveFromCart, onCardClick}){
     const cartItem = cart.map((productObj)=> (
