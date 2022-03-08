@@ -1,13 +1,13 @@
 import React from 'react'
-
+import '../styles/CartCard.css'
 function CartCard({product, handleRemoveFromCart, handleCardClick}) {
     const {image, name, description, price} = product
     
     return (
         <div>
-            <div onClick={()=> handleCardClick(product)} className="card col-8 m-1 p-1" >
-                <img className="card-img-top" src={image} alt={name}/>
-                <div className="card-body">
+            <div onClick={()=> handleCardClick(product)} className="card col-12  p-2 m-2" >
+                <img className="card-img-top image" src={image} alt={name}/>
+                <div className="card-body h-100">
                     <h5 className="card-title">{name}</h5>
                     <p className="card-text">{description}</p>
                     <span className="price">{price}</span>
