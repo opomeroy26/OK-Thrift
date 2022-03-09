@@ -10,7 +10,6 @@ import ListingDetailPage from './ListingDetailPage'
 import '../styles/index.css'
 import '../styles/SideBar.css'
 import '../styles/App.css'
-import ItemCard from "./ItemCard";
 
 function App() {
   const [inventory, setInventory] = useState([])

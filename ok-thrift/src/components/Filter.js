@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/Filter.css'
 
 function Filter ({sortBy, onSortBy}) {
     function handleChangeOnSortBy (e){
@@ -6,12 +7,12 @@ function Filter ({sortBy, onSortBy}) {
     }
     return (
         <div className ="filterWrapper">
-            <div className = "ui menu">
+            <div className = "uimenu">
                 <label>Sort by Size</label>
             </div>
-            <div className="ui item">
-                <select
-                    className="ui selection dropdown"
+            <div>
+                <select 
+                    className="uiSelectionDropdown"
                     name="sort"
                     onChange={handleChangeOnSortBy}
                     value={sortBy}>
