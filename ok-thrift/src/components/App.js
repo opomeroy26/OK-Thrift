@@ -6,14 +6,17 @@ import HomePage from "./HomePage";
 import CartPage from "./CartPage";
 import DetailPage from "./DetailPage";
 import ProfilePage from "./ProfilePage";
+import ListingDetailPage from './ListingDetailPage'
 import '../styles/index.css'
 import '../styles/SideBar.css'
+import '../styles/App.css'
 
 function App() {
   const [inventory, setInventory] = useState([])
   const [cart, setCart] = useState([])
   const history = useHistory();
   const [homeItemdetail, setHomeItemDetail] = useState([])
+  const [listingDetail, setListingDetail] = useState([])
 
   useEffect(()=> {
     fetch("http://localhost:3001/inventory")
@@ -40,9 +43,18 @@ function App() {
     setHomeItemDetail([product])
   }
 
+  function onProfileCardClick(product){
+    history.push('/listingdetail')
+    setListingDetail([product])
+  }
+
   function onReturnToHomeClick(){
     history.push("/")
 
+  }
+
+  function onReturnToProfileClick(){
+    history.push('/profile')
   }
 
   function onAddToInventory(product){
@@ -52,13 +64,13 @@ function App() {
 
 
   return (
-    <div className="container-fluid" >
+    <div className="container-fluid "  >
       
     
       
         <SideBar /> 
       
-      <div className='content row' style={{ marginLeft: '200px', marginRight: '25px' }}>
+      <div className='content row'  style={{ marginLeft: '200px', marginRight: '25px' }}>
       <Switch>
         <Route exact path="/">
           <HomePage 
@@ -85,9 +97,16 @@ function App() {
             
           />
         </Route>
+        <Route exact path='/listingdetail'>
+          <ListingDetailPage
+          detail={listingDetail}
+          handleReturnToProfile = {onReturnToProfileClick}
+          
+          />  
+        </Route>
 
         <Route exact path="/profile">
-          <ProfilePage onAddToInventory={onAddToInventory}/>
+          <ProfilePage onAddToInventory={onAddToInventory} onCardClick={onProfileCardClick}/>
         </Route>
       </Switch>
       </div>

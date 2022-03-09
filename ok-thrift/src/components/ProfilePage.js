@@ -3,7 +3,7 @@ import '../styles/ProfilePage.css'
 import ItemCard from './ItemCard.js'
 import Form from './Form.js'
 
-function ProfilePage({ onAddToInventory }){
+function ProfilePage({ onAddToInventory, onCardClick }){
     const initialFormState = {
         name: '',
         description: '',
@@ -58,7 +58,7 @@ function ProfilePage({ onAddToInventory }){
         <ItemCard 
             key={productObj.id + productObj.name}
             product={productObj}
-            
+            handleCardClick = {onCardClick}
         />
     </div>
    ))
