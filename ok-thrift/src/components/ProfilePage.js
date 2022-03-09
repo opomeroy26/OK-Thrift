@@ -8,7 +8,8 @@ function ProfilePage({ myItems, setMyItems, onAddToInventory, onCardClick }){
         name: '',
         description: '',
         image: '',
-        price:''
+        price:'',
+        size:''
     }
     
     const [showForm, setShowForm] = useState(false)
@@ -38,6 +39,9 @@ function ProfilePage({ myItems, setMyItems, onAddToInventory, onCardClick }){
         
         else if(formState.description === '') {
             alert('Please enter a description')
+        }
+        else if(formState.size ===  ''){
+            alert('Please choose a size')
         }
         else {
         fetch('http://localhost:3000/inventory', {

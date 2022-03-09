@@ -9,6 +9,7 @@ function ItemCard({product, handleAddToCart, handleCardClick,}) {
          <img className="card-img-top image" src={image} alt= {name}/>
         <div className="card-body h-100">
             <h5 className="card-title">{name}</h5>
+            <h6 className='card-subtitle md-2 text-muted'>{size}</h6>
             <p className="card-text-item">{description}</p>
             <p className="card-text-item">Size: {size}</p>
             <p className="price">{price}</p>

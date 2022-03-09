@@ -25,7 +25,7 @@ function Form({handleSubmit, handleChange, formState}) {
                             <div className='form-row'>   
                                 <div className='col-6 no-gutters'> 
                                     <div className='form-group'>
-                                        <label for='name' className='label'>Name</label>
+                                        <label htmlFor='name' className='label'>Name</label>
                                         <input
                                             type='text'
                                             className='form-control'
@@ -38,9 +38,11 @@ function Form({handleSubmit, handleChange, formState}) {
                                         </input>
                                     </div>  
                                 </div>
+                            </div>
+                            <div className='form-row'>    
                                 <div className='col-4'>
                                     <div className='form-group'>
-                                        <label for='price' className='label'>Price</label>
+                                        <label htmlFor='price' className='label'>Price</label>
                                         <input
                                             type='text'
                                             className='form-control'
@@ -52,12 +54,34 @@ function Form({handleSubmit, handleChange, formState}) {
                                         </input>
                                     </div>
                                 </div>
+                                <div className='col-4'>
+                                    <div className='form-group'>
+                                        <label htmlFor='size' className='label'>Size</label>
+                                        <select
+                                            className='form-control'
+                                            id='size'
+                                            value={formState.size}
+                                            onChange={handleChange}
+                                            name='size'>
+                                                <option value='XS'>XS</option>
+                                                <option value='S'>S</option>
+                                                <option value='M'>M</option>
+                                                <option value='L'>L</option>
+                                                <option value='XL'>XL</option>
+                                                <option value='1'>1</option>
+                                                <option value='2'>2</option>
+                                                <option value='3'>3</option>
+                                                <option value='4'>4</option>
+                                                <option value='5'>5</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
                             
                             <div className='form-row'>
                                 <div className='col'>
-                                    <div class='form-group'>
-                                        <label for='description' className='label'>Description</label>
+                                    <div className='form-group'>
+                                        <label htmlFor='description' className='label'>Description</label>
                                         <input
                                             type='text'
                                             className='form-control'
