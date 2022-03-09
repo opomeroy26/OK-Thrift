@@ -1,9 +1,9 @@
-.searchbar {
+/* .searchbar {
     flex: 1 1 auto;
     margin: 0 1rem;
     display: flex;
     justify-content: center;
-  }
+  } */
   
   .searchbar input {
     width: 90%;
