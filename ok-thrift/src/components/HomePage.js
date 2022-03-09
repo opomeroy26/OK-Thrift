@@ -15,7 +15,7 @@ function HomePage({inventory, onAddToCart, onCardClick}){
     ))
     
     return (
-        <div className='row content  d-flex justify-content-center' id='items' >
+        <div className='row content  d-flex justify-content-center m-2 p-2 ' id='items' >
             {product}
         </div>
     )
