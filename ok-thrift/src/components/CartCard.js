@@ -5,7 +5,7 @@ function CartCard({product, handleRemoveFromCart}) {
     
     return (
         
-            <div className= "card col-12  p-2 m-2" >
+            <div className= "card col-4  p-2 m-2" >
                 <img className="card-img-top image" src={image} alt={name}/>
                 <div className="card-body h-100">
                     <h5 className="card-title">{name}</h5>
