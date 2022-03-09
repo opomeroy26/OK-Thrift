@@ -13,12 +13,12 @@ function CartPage({cart, onRemoveFromCart, handleReturnToHome}){
     ))
     return (
         <div>
-        <div className='row d-flex justify-content-center m-2 p-2' id='cart'>
-            <button onClick={() => handleReturnToHome()} className="btn btn-secondary">Continue Shopping </button>
-        </div>
-        <div className='row d-flex justify-content-center m-2 p-2' id='cart'>
-            {cartItem}
-        </div>
+            <div className='row d-flex justify-content-center m-2 p-2' id='cart'>
+             {cartItem}
+            </div>
+            <div className='row d-flex justify-content-center m-2 p-2' id='cart'>
+                <button onClick={() => handleReturnToHome()} className="btn btn-secondary">Continue Shopping </button>
+            </div>
         </div>
 
     )
