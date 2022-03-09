@@ -3,14 +3,14 @@ import '../styles/ProfilePage.css'
 import ItemCard from './ItemCard.js'
 import Form from './Form.js'
 
-function ProfilePage({ onAddToInventory, onCardClick }){
+function ProfilePage({ myItems, setMyItems, onAddToInventory, onCardClick }){
     const initialFormState = {
         name: '',
         description: '',
         image: '',
         price:''
     }
-    const [myItems, setMyItems] = useState([])
+    
     const [showForm, setShowForm] = useState(false)
 
 
