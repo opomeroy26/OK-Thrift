@@ -28,6 +28,7 @@ function SideBar({onSearch, sortBy, onSortBy}){
                 </NavLink>
                 </li>
                 <Search onSearch={onSearch} />
+        
                 <li>
                 <Filter sortBy={sortBy} onSortBy={onSortBy} />
                 </li>
