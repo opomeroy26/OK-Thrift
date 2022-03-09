@@ -18,10 +18,11 @@ function App() {
   const [homeItemdetail, setHomeItemDetail] = useState([])
   const [listingDetail, setListingDetail] = useState([])
   const [search, setSearch] = useState("")
+  const [myItems, setMyItems] = useState([])
 
 
   useEffect(()=> {
-    fetch("http://localhost:3000/inventory")
+    fetch("http://localhost:3001/inventory")
     .then((resp) => resp.json())
     .then(setInventory)
   }, [])
@@ -114,7 +115,12 @@ function App() {
         </Route>
 
         <Route exact path="/profile">
-          <ProfilePage onAddToInventory={onAddToInventory} onCardClick={onProfileCardClick}/>
+          <ProfilePage 
+          onAddToInventory={onAddToInventory} 
+          onCardClick={onProfileCardClick}
+          myItems={myItems}
+          setMyItems={setMyItems}
+          />
         </Route>
       </Switch>
       </div>
