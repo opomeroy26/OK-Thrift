@@ -7,7 +7,7 @@ function Form({handleSubmit, handleChange, formState}) {
                             <div className='form-row'>
                                 <div className='col'>
                                     <div className='form-group'>
-                                        <label for='image' className='label'>Image</label>
+                                        <label htmlFor='image' className='label'>Image</label>
                                             <input 
                                                 type='text' 
                                                 className='form-control' 
@@ -73,6 +73,11 @@ function Form({handleSubmit, handleChange, formState}) {
                                                 <option value='3'>3</option>
                                                 <option value='4'>4</option>
                                                 <option value='5'>5</option>
+                                                <option value='6'>6</option>
+                                                <option value='7'>7</option>
+                                                <option value='8'>8</option>
+                                                <option value='9'>9</option>
+                                                <option value='10'>10</option>
                                         </select>
                                     </div>
                                 </div>
