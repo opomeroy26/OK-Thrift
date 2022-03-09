@@ -1,4 +1,6 @@
-import ItemCard from './ItemCard.js'
+import ItemCard from './ItemCard.js';
+import React from "react";
+
 
 function HomePage({inventory, onAddToCart, onCardClick}){
     const product = inventory.map((productObj)=> (
