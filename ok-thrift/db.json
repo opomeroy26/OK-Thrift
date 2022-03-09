@@ -4,70 +4,122 @@
       "id": 1,
       "image": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=405&q=80",
       "name": "Poncho",
+<<<<<<< Updated upstream
       "price": "10.80",
+=======
+      "price": "$10.80",
+      "size": "small",
+>>>>>>> Stashed changes
       "description": "Cream-colored women's poncho. In good condition. Only been worn once. Slightly see through."
+
     },
     {
       "id": 2,
       "image": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80",
       "name": "Bomber jacket",
+<<<<<<< Updated upstream
       "price": "12.99",
+=======
+      "price": "$12.99",
+      "size": "medium",
+>>>>>>> Stashed changes
       "description": "Orange jacket. Small hole in right pocket. Size medium."
     },
     {
       "id": 3,
       "image": "https://images.unsplash.com/photo-1564584217132-2271feaeb3c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
       "name": "T-shirt",
+<<<<<<< Updated upstream
       "price": "4.00",
+=======
+      "price": "$4.00",
+      "size": "medium",
+>>>>>>> Stashed changes
       "description": "Blue men's T-shirt, though could be unisex. Slighty used. Size medium but fits slightly tighter. "
     },
     {
       "id": 4,
       "image": "https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1494496195158-c3becb4f2475%3Fixlib%3Drb-1.2.1%26ixid%3DMnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8%26auto%3Dformat%26fit%3Dcrop%26w%3D1170%26q%3D80",
       "name": "Shoes",
+<<<<<<< Updated upstream
       "price": "24.00",
+=======
+      "price": "$24.00",
+      "size": "10",
+>>>>>>> Stashed changes
       "description": "High-top converse tennis-shoes. Size 10. Good condition, some wear and skids on sole but no holes."
     },
     {
       "id": 5,
       "image": "https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1602293589930-45aad59ba3ab%3Fixlib%3Drb-1.2.1%26ixid%3DMnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8%26auto%3Dformat%26fit%3Dcrop%26w%3D687%26q%3D80",
       "name": "Pants",
+<<<<<<< Updated upstream
       "price": "20.00",
+=======
+      "price": "$20.00",
+      "size": "4",
+>>>>>>> Stashed changes
       "description": "Women's Madewell blue jeans. Size 4. Slightly worn. "
     },
     {
       "id": 6,
       "image": "https://images.unsplash.com/photo-1543076447-215ad9ba6923?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
       "name": "Jean Jacket",
+<<<<<<< Updated upstream
       "price": "28.00",
+=======
+      "price": "$28.00",
+      "size": "medium",
+>>>>>>> Stashed changes
       "description": "Uni-sex blue jean jacket. Sherpa interior. Brand new, never worn. Size medium but fits bigger."
     },
     {
       "id": 7,
       "image": "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=397&q=80",
       "name": "Jeans",
+<<<<<<< Updated upstream
       "price": "18.00",
+=======
+      "price": "$18.00",
+      "size": "medium",
+>>>>>>> Stashed changes
       "description": "Men's dark blue jeans. Size M. Some wear and tear in back pocket. "
     },
     {
       "id": 8,
       "image": "https://images.unsplash.com/photo-1611312449412-6cefac5dc3e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=392&q=80",
       "name": "Flannel",
+<<<<<<< Updated upstream
       "price": "9.00",
       "description": "Uni-sex black and gray checkered, cotton flannel. In good condition. Size medium."
+=======
+      "price": "$9.00",
+      "size": "large",
+      "description": "Uni-sex black and gray checkered, cotton flannel. In good condition. Size large."
+>>>>>>> Stashed changes
     },
     {
       "id": 9,
       "image": "https://images.unsplash.com/photo-1615424902876-df124220b0b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=327&q=80",
       "name": "Shoes",
+<<<<<<< Updated upstream
       "price": "29.00",
+=======
+      "price": "$29.00",
+      "size": "8",
+>>>>>>> Stashed changes
       "description": "Never been worn Nike shoes. Size 8 womens."
     },
     {
       "id": 10,
       "image": "https://images.unsplash.com/photo-1643226354613-260043e30011?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=371&q=80",
       "name": "Shoes",
+<<<<<<< Updated upstream
       "price": "31.00",
+=======
+      "price": "$31.00",
+      "size": "11",
+>>>>>>> Stashed changes
       "description": "New men's boots. Size 11. Never been worn."
     }
   ]

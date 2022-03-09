@@ -19,12 +19,13 @@ function App() {
   const [homeItemdetail, setHomeItemDetail] = useState([])
   const [listingDetail, setListingDetail] = useState([])
   const [search, setSearch] = useState("")
+  const [sortBy, setSortBy] = useState("All Sizes")
   const [myItems, setMyItems] = useState([])
   const [total, setTotal] = useState(0)
 
 
   useEffect(()=> {
-    fetch("http://localhost:3001/inventory")
+    fetch("http://localhost:3000/inventory")
     .then((resp) => resp.json())
     .then(setInventory)
   }, [])
@@ -79,17 +80,30 @@ function App() {
 
   }
 
-  const searchedInventory = inventory.filter((product) => 
+  const searchedInventory = inventory
+    .filter((product) => 
     product.description.toLowerCase().includes(search.toLowerCase())
-  );
+  )
+
+    .filter((product) => {
+      if (sortBy === "All Sizes") {
+        return ([...inventory])
+
+      } else {
+        return (product.size.toLowerCase().includes(sortBy.toLowerCase()))
+      }
+    })
+
 
 
   return (
     <div className="container-fluid "  >
       
-    
-      
-        <SideBar onSearch={setSearch}/> 
+      <SideBar 
+        onSearch={setSearch}
+        sortBy={sortBy}
+        onSortBy = {setSortBy}
+      /> 
       
       <div className='content row'  style={{ marginLeft: '200px', marginRight: '25px' }}>
       <Switch>
