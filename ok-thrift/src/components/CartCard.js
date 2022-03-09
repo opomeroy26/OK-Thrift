@@ -4,7 +4,7 @@ function CartCard({product, handleRemoveFromCart}) {
     const {image, name, description, price} = product
     
     return (
-        <div>
+        
             <div className= "card col-12  p-2 m-2" >
                 <img className="card-img-top image" src={image} alt={name}/>
                 <div className="card-body h-100">
@@ -14,7 +14,7 @@ function CartCard({product, handleRemoveFromCart}) {
                     <button onClick={(e)=>handleRemoveFromCart(e, product)} className="btn btn-secondary">Remove From Cart</button>
                 </div>
             </div>
-       </div>
+       
    );
    }
    
