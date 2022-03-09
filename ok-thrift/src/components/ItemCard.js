@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/ItemCard.css'
 
 function ItemCard({product, handleAddToCart, handleCardClick,}) {
-    const {name, description, price, image} = product
+    const {name, description, price, image, size} = product
 
     return (
      <div onClick={()=> handleCardClick(product)} className="card border-light col-4  p-2 m-2 item" >
@@ -10,6 +10,7 @@ function ItemCard({product, handleAddToCart, handleCardClick,}) {
         <div className="card-body h-100">
             <h5 className="card-title">{name}</h5>
             <p className="card-text-item">{description}</p>
+            <p className="card-text-item">Size: {size}</p>
             <p className="price">{price}</p>
             <button onClick={(e)=> handleAddToCart(e, product)} className="btn btn-secondary">Add to Cart 🛒 </button>
         </div> 

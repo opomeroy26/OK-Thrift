@@ -2,9 +2,10 @@ import '../styles/SideBar.css'
 import {NavLink} from "react-router-dom"
 import '../styles/index.css'
 import Search from "./Search";
+import Filter from "./Filter";
 
 
-function SideBar({onSearch}){
+function SideBar({onSearch, sortBy, onSortBy}){
     return (
         
             
@@ -26,8 +27,11 @@ function SideBar({onSearch}){
                     Profile
                 </NavLink>
                 </li>
-                </ul>
                 <Search onSearch={onSearch} />
+                <li>
+                <Filter sortBy={sortBy} onSortBy={onSortBy} />
+                </li>
+                </ul>
             </nav>
             
         

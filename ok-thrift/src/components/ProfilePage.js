@@ -35,11 +35,12 @@ function ProfilePage({ myItems, setMyItems, onAddToInventory, onCardClick }){
         else if(formState.price === '') {
             alert('Please give your item a price')
         }
+        
         else if(formState.description === '') {
             alert('Please enter a description')
         }
         else {
-        fetch('http://localhost:3001/inventory', {
+        fetch('http://localhost:3000/inventory', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
