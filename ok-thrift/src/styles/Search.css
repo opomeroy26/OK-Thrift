@@ -16,9 +16,10 @@
   }
   
   .searchbar button {
-    padding: 0 0.25rem;
-    background: white;
+    padding: 0 0.40rem;
+    background: #BE93D4;
     border: 1px solid #ccc;
     border-radius: 3px;
+    color:black;
   }
   
