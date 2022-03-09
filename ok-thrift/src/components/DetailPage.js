@@ -13,7 +13,7 @@ function DetailPage({detail, handleReturnToHome, onAddToCart, handleReturnToCart
     ))
     
     return (
-        <div id='cart'>
+        <div className='row d-flex justify-content-center' id='cart'>
             {detailItem}
             <button onClick={() => handleReturnToHome()} className="btn btn-secondary">Continue Shopping </button>
         </div>
