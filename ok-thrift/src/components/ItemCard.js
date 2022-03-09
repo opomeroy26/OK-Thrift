@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/ItemCard.css'
 
-function ItemCard({product, handleAddToCart, handleCardClick,}) {
+function ItemCard({product, handleAddToCart, handleCardClick, handleAddToLikes}) {
     const {name, description, price, image, size} = product
 
     return (
@@ -9,11 +9,16 @@ function ItemCard({product, handleAddToCart, handleCardClick,}) {
          <img className="card-img-top image" src={image} alt= {name}/>
         <div className="card-body h-100">
             <h5 className="card-title">{name}</h5>
-            <h6 className='card-subtitle md-2 text-muted'>{size}</h6>
+            <h6 className='card-subtitle md-2 text-muted'>Size: {size}</h6>
             <p className="card-text-item">{description}</p>
-            <p className="card-text-item">Size: {size}</p>
+            
             <p className="price">{price}</p>
-            <button onClick={(e)=> handleAddToCart(e, product)} className="btn btn-secondary">Add to Cart 🛒 </button>
+            
+            <div className='row'>
+                <button onClick={(e)=> handleAddToCart(e, product)} className="btn btn-secondary">Add to Cart  </button>
+                <button onClick={(e)=> handleAddToLikes(e, product)} className='btn-secondary'> Add to Likes </button>
+            </div>
+
         </div> 
     </div>
 );

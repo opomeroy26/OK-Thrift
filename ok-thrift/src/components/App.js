@@ -22,10 +22,11 @@ function App() {
   const [sortBy, setSortBy] = useState("All Sizes")
   const [myItems, setMyItems] = useState([])
   const [total, setTotal] = useState(0)
+  const [myLikedItems, setMyLikedItems] = useState([])
 
 
   useEffect(()=> {
-    fetch("http://localhost:3000/inventory")
+    fetch("http://localhost:3001/inventory")
     .then((resp) => resp.json())
     .then(setInventory)
   }, [])
@@ -47,6 +48,12 @@ function App() {
     }
     history.push("/cart")
     
+  }
+  function onAddToLikes(e, product){
+    e.stopPropagation();
+    if( !myLikedItems.includes(product)){
+      setMyLikedItems([...myLikedItems, product])
+    }
   }
 
   
@@ -113,6 +120,7 @@ function App() {
             inventory={searchedInventory} 
             onAddToCart = {onAddToCart}
             onCardClick = {onHomeCardClick}
+            onAddToLikes ={onAddToLikes}
           />
         </Route>
       
@@ -148,6 +156,7 @@ function App() {
           onCardClick={onProfileCardClick}
           myItems={myItems}
           setMyItems={setMyItems}
+          myLikedItems={myLikedItems}
           />
         </Route>
       </Switch>
