@@ -16,10 +16,10 @@ function DetailPage({detail, handleReturnToHome, onAddToCart, handleReturnToCart
         
         <div>
         <div className='row d-flex justify-content-center m-2 p-2' id='cart'>
-            <button onClick={() => handleReturnToHome()} className="btn btn-secondary">Continue Shopping </button>
+            {detailItem}
         </div>
         <div className='row d-flex justify-content-center m-2 p-2' id='cart'>
-            {detailItem}
+            <button onClick={() => handleReturnToHome()} className="btn btn-secondary">Continue Shopping </button>
         </div>
         </div>
     )
