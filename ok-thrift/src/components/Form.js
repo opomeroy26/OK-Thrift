@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Form({handleSubmit, handleImageChange, handleDescriptionChange, handleNameChange, handlePriceChange, image, name, price, description}) {
+function Form({handleSubmit, handleChange, formState}) {
   return (
                     <div id='newItemForm'>
                         <form id='form' className='border border-secondary rounded p-2 m-2' onSubmit={handleSubmit}>
@@ -13,8 +13,9 @@ function Form({handleSubmit, handleImageChange, handleDescriptionChange, handleN
                                                 className='form-control' 
                                                 id='image' 
                                                 placeholder='Please enter a image URL'
-                                                value={image}
-                                                onChange={handleImageChange}
+                                                value={formState.image}
+                                                onChange={handleChange}
+                                                name='image'
                                             >
                                         </input>
                                     </div>
@@ -30,8 +31,10 @@ function Form({handleSubmit, handleImageChange, handleDescriptionChange, handleN
                                             className='form-control'
                                             id='name'
                                             placeholder='Item name'
-                                            value={name}
-                                            onChange={handleNameChange}>
+                                            value={formState.name}
+                                            onChange={handleChange}
+                                            name='name'
+                                            >    
                                         </input>
                                     </div>  
                                 </div>
@@ -43,8 +46,9 @@ function Form({handleSubmit, handleImageChange, handleDescriptionChange, handleN
                                             className='form-control'
                                             id='price'
                                             placeholder='$'
-                                            value={price}
-                                            onChange={handlePriceChange}>
+                                            value={formState.price}
+                                            onChange={handleChange}
+                                            name='price'>
                                         </input>
                                     </div>
                                 </div>
@@ -59,8 +63,9 @@ function Form({handleSubmit, handleImageChange, handleDescriptionChange, handleN
                                             className='form-control'
                                             id='description'
                                             placeholder='enter a brief desription about your item'
-                                            value={description}
-                                            onChange={handleDescriptionChange}>
+                                            value={formState.description}
+                                            onChange={handleChange}
+                                            name='description'>
                                         </input>
                                     </div>
                                 </div>

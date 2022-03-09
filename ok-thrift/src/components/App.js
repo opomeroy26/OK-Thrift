@@ -58,7 +58,7 @@ function App() {
       
         <SideBar /> 
       
-      <div className='content' style={{ marginLeft: '200px' }}>
+      <div className='content row' style={{ marginLeft: '200px', marginRight: '25px' }}>
       <Switch>
         <Route exact path="/">
           <HomePage 

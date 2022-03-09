@@ -4,46 +4,53 @@ import ItemCard from './ItemCard.js'
 import Form from './Form.js'
 
 function ProfilePage({ onAddToInventory }){
-    const [image, setImage] = useState("")
-    const [name, setName] = useState("")
-    const [price, setPrice] = useState("")
-    const [description, setDescription] = useState("")
+    const initialFormState = {
+        name: '',
+        description: '',
+        image: '',
+        price:''
+    }
     const [myItems, setMyItems] = useState([])
     const [showForm, setShowForm] = useState(false)
 
 
-    function handleImageChange(event) {
-        setImage(event.target.value)
-        
-    }
-    function handleNameChange(event) {
-        setName(event.target.value)
-    }
-    function handlePriceChange(event) {
-        setPrice(event.target.value)
-    }
-    function handleDescriptionChange(event) {
-        setDescription(event.target.value)
-    }
+    
+
+    const [formState, setFormState]= useState(initialFormState)
   
+    const handleChange = (event) => {
+        const {name, value } = event.target;
+        setFormState(formState => ({...formState, [name]: value}))
+    }
+
     function handleSubmit(event){
         event.preventDefault()
-        const formData ={image: image, name: name, price: price, description: description}
-        setMyItems([...myItems, formData])    
+           
+        if (formState.image === '') {
+            alert('Please provide an image')
+        }
+        else if(formState.name === '') {
+            alert('Please give your item a name')
+        }
+        else if(formState.price === '') {
+            alert('Please give your item a price')
+        }
+        else if(formState.description === '') {
+            alert('Please enter a description')
+        }
+        else {
         fetch('http://localhost:3001/inventory', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify(formState),
             })
-            .then(onAddToInventory(formData)
-            .then( setImage(''),
-                    setName(''),
-                    setPrice(''),
-                    setDescription('')
-            )
-        )  
+            .then(onAddToInventory(formState))
+            .then(setFormState(initialFormState))
+            .then(setMyItems([...myItems, formState]) )
+            console.log()
+        }   
     }
     
    const newItem = myItems.map((productObj)=> (
@@ -63,7 +70,7 @@ function ProfilePage({ onAddToInventory }){
 
     
     return (
-            <div className='container p-3 m-3' id='profile'>
+            <div className='container p-3 m-3 ' id='profile'>
                 <img className ='rounded-circle  border profile-image'
                     src ='https://static9.depositphotos.com/1009634/1075/v/450/depositphotos_10757374-stock-illustration-no-user-profile-picture.jpg' 
                     alt='profile'>
@@ -74,12 +81,12 @@ function ProfilePage({ onAddToInventory }){
                 </h5> {/*Should also be dynamic */}
                 
                 
-                <button class="btn btn-secondary" 
+                <button className="btn btn-secondary" 
                         onClick={handleShowForm}
                         >
                         {showForm ? 'Hide Form' : 'Add New Listing'}
                 </button>
-                {showForm ? <Form handleDescriptionChange={handleDescriptionChange} handleImageChange={handleImageChange} handleNameChange={handleNameChange} handlePriceChange={handlePriceChange} handleSubmit={handleSubmit} name={name} image={image} description={description} price={price}/> : null}
+                {showForm ? <Form handleChange={handleChange} handleSubmit={handleSubmit} formState={formState} /> : null}
                 
            
             
