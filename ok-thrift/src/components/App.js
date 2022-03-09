@@ -10,6 +10,7 @@ import ListingDetailPage from './ListingDetailPage'
 import '../styles/index.css'
 import '../styles/SideBar.css'
 import '../styles/App.css'
+import ItemCard from "./ItemCard";
 
 function App() {
   const [inventory, setInventory] = useState([])
@@ -19,6 +20,7 @@ function App() {
   const [listingDetail, setListingDetail] = useState([])
   const [search, setSearch] = useState("")
   const [myItems, setMyItems] = useState([])
+  const [total, setTotal] = useState(0)
 
 
   useEffect(()=> {
@@ -27,15 +29,26 @@ function App() {
     .then(setInventory)
   }, [])
 
+  useEffect(() => {
+    setTotal(0)
+    for (let i=0; i<cart.length; i++){
+      let runningTotal =((total) => total + parseFloat(cart[i].price))
+      setTotal(runningTotal)
+      
+    }
+  },[cart])
+  
+  
   function onAddToCart(e, product){
     e.stopPropagation();
     if (!cart.includes(product)) {
       setCart([...cart, product])
     }
     history.push("/cart")
-    console.log("Adding to cart", product)
-
+    
   }
+
+  
 
   function onRemoveFromCart(e, product){
     e.stopPropagation();
@@ -94,6 +107,7 @@ function App() {
             cart={cart}
             onRemoveFromCart = {onRemoveFromCart}
             handleReturnToHome = {onReturnToHomeClick}
+            total={total}
           />
         </Route>
       
