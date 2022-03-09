@@ -1,9 +1,10 @@
 import '../styles/SideBar.css'
 import {NavLink} from "react-router-dom"
 import '../styles/index.css'
+import Search from "./Search";
 
 
-function SideBar(){
+function SideBar({onSearch}){
     return (
         
             
@@ -26,6 +27,7 @@ function SideBar(){
                 </NavLink>
                 </li>
                 </ul>
+                <Search onSearch={onSearch} />
             </nav>
             
         

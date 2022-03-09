@@ -17,9 +17,11 @@ function App() {
   const history = useHistory();
   const [homeItemdetail, setHomeItemDetail] = useState([])
   const [listingDetail, setListingDetail] = useState([])
+  const [search, setSearch] = useState("")
+
 
   useEffect(()=> {
-    fetch("http://localhost:3001/inventory")
+    fetch("http://localhost:3000/inventory")
     .then((resp) => resp.json())
     .then(setInventory)
   }, [])
@@ -30,6 +32,7 @@ function App() {
       setCart([...cart, product])
     }
     history.push("/cart")
+    console.log("Adding to cart", product)
 
   }
 
@@ -62,19 +65,24 @@ function App() {
 
   }
 
+  const searchedInventory = inventory.filter((product) => 
+    product.description.toLowerCase().includes(search.toLowerCase())
+  );
+
 
   return (
     <div className="container-fluid "  >
       
     
       
-        <SideBar /> 
+        <SideBar onSearch={setSearch}/> 
       
       <div className='content row'  style={{ marginLeft: '200px', marginRight: '25px' }}>
       <Switch>
         <Route exact path="/">
           <HomePage 
-            inventory={inventory} 
+            
+            inventory={searchedInventory} 
             onAddToCart = {onAddToCart}
             onCardClick = {onHomeCardClick}
           />
