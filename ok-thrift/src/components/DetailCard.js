@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/DetailCard.css'
 
-function DetailCard({product, handleAddToCart, handleCardClick,}) {
+function DetailCard({product, handleAddToCart, handleCardClick, handleAddToLikes}) {
     const {name, description, price, image, size} = product
 
     return (
@@ -18,6 +18,7 @@ function DetailCard({product, handleAddToCart, handleCardClick,}) {
                     <p class="card-text">{description}</p>
                     <p class="card-text">${price}</p>
                     <button onClick={(e)=> handleAddToCart(e, product)} className="btn btn-secondary">Add to Cart 🛒 </button> 
+                    <button onClick={(e)=> handleAddToLikes(e, product)} className='btn-secondary'> Add to Likes </button>
                 </div>
             </div>
         </div>

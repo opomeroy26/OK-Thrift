@@ -1,13 +1,14 @@
 import React from 'react';
 import DetailCard from "./DetailCard";
 
-function DetailPage({detail, handleReturnToHome, onAddToCart, handleReturnToCart}){
+function DetailPage({detail, handleReturnToHome, onAddToCart, handleReturnToCart, onAddToLikes}){
     const detailItem = detail.map((productObj)=> (
         <div>
             <DetailCard
                 key={productObj.id + productObj.name}
                 product={productObj}
                 handleAddToCart={onAddToCart}
+                handleAddToLikes = {onAddToLikes}
             />
         </div>
     ))

@@ -4,7 +4,7 @@ import ListingDetailCard from './ListingDetailCard'
 function ListingDetailPage({detail, handleReturnToProfile, onAddToCart, onRemoveFromLikes}) {
   const detailItem = detail.map((productObj)=> (
       <div>
-          <ListingDetailCard 
+          <ListingDetailCard
             key={productObj.id + productObj.name}
             product={productObj}
             handleAddToCart={onAddToCart}
