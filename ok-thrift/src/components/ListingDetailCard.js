@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ListingDetailCard({product}) {
+function ListingDetailCard({product, handleRemoveFromLikes, handleAddToCart}) {
     const {name, description, price, image, size} = product
     return (
         <div class="card mb-3 border-light rounded" id='detail-card' >
@@ -14,6 +14,8 @@ function ListingDetailCard({product}) {
                     <h6 class='card-subtitle text-muted'>Size: {size}</h6>
                     <p class="card-text">{description}</p>
                     <p class="card-text">${price}</p>
+                    <button onClick={(e)=> handleRemoveFromLikes(e, product)} className='btn-secondary'>Remove From Likes</button>
+                    <button onClick={(e)=> handleAddToCart(e, product)} className="btn btn-secondary">Add to Cart  </button>
                 </div>
             </div>
         </div>
