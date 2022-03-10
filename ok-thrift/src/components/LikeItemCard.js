@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ProfileItemCard({product, handleCardClick, handleRemoveFromLikes, handleAddToCart}) {
+function LikeItemCard({product, handleCardClick, handleRemoveFromLikes, handleAddToCart}) {
     const {name, description, price, image, size} = product
     return (
     <div onClick={()=> handleCardClick(product)} className="card border-light col-4  p-2 m-2 item" >
@@ -12,8 +12,8 @@ function ProfileItemCard({product, handleCardClick, handleRemoveFromLikes, handl
        
        <p className="price">${price}</p>
        <div className ='row'>
-        {/* <button onClick={(e)=> handleAddToCart(e, product)} className="btn btn-secondary">Add to Cart  </button>
-        <button onClick={(e)=> handleRemoveFromLikes(e, product)} className='btn-secondary'>Remove From Likes</button> */}
+        <button onClick={(e)=> handleAddToCart(e, product)} className="btn btn-secondary">Add to Cart  </button>
+        <button onClick={(e)=> handleRemoveFromLikes(e, product)} className='btn-secondary'>Remove From Likes</button>
        </div>
        
    </div> 
@@ -21,4 +21,4 @@ function ProfileItemCard({product, handleCardClick, handleRemoveFromLikes, handl
   )
 }
 
-export default ProfileItemCard
+export default LikeItemCard;
