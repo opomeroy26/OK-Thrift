@@ -2,7 +2,7 @@ import React,{ useState } from 'react'
 import EditForm from './EditForm'
 
 
-function ListingDetailCard({product, handleRemoveFromLikes, handleAddToCart, onUpdateListing, productId}) {
+function ListingDetailCard({product, handleRemoveFromLikes, handleAddToCart, onUpdateListing, productId, myItems}) {
     const initialFormState = {
         name: '',
         description: '',
@@ -44,6 +44,7 @@ function ListingDetailCard({product, handleRemoveFromLikes, handleAddToCart, onU
 
     if (myItems.includes(product)) {
     return (
+    <div>
         <div className="card mb-3 border-light rounded" id='detail-card' >
         <div className="row g-0">
             <div className="col-md-6">
