@@ -159,6 +159,8 @@ function App() {
           handleReturnToProfile = {onReturnToProfileClick}
           onAddToCart = {onAddToCart}
           onRemoveFromLikes={onRemoveFromLikes}
+          myLikedItems={myLikedItems}
+          myItems={myItems}
 
           
           />  

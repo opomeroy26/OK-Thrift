@@ -1,7 +1,7 @@
 import React from 'react'
 import ListingDetailCard from './ListingDetailCard'
 
-function ListingDetailPage({detail, handleReturnToProfile, onAddToCart, onRemoveFromLikes}) {
+function ListingDetailPage({detail, handleReturnToProfile, onAddToCart, onRemoveFromLikes, myLikedItems, myItems}) {
   const detailItem = detail.map((productObj)=> (
       <div>
           <ListingDetailCard
@@ -9,6 +9,8 @@ function ListingDetailPage({detail, handleReturnToProfile, onAddToCart, onRemove
             product={productObj}
             handleAddToCart={onAddToCart}
             handleRemoveFromLikes={onRemoveFromLikes}
+            myLikedItems={myLikedItems}
+            myItems={myItems}
             
           />
       </div>
