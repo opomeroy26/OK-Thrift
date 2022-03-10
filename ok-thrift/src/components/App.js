@@ -72,7 +72,7 @@ function App() {
     setHomeItemDetail([product])
   }
 
-  function onProfileCardClick(product){
+  function onCardClick(product){
     history.push('/listingdetail')
     setListingDetail([product])
   }
@@ -146,6 +146,7 @@ function App() {
             handleReturnToHome = {onReturnToHomeClick}
             onAddToCart = {onAddToCart}
             onRemoveFromCart = {onRemoveFromCart}
+            onAddToLikes={onAddToLikes}
             
           />
         </Route>
@@ -159,11 +160,12 @@ function App() {
           
           />  
         </Route>
-
+    
         <Route exact path="/profile">
           <ProfilePage 
           onAddToInventory={onAddToInventory} 
-          onCardClick={onProfileCardClick}
+          onCardClick={onCardClick}
+          // onLikedCardClick ={onLikedCardClick}
           myItems={myItems}
           setMyItems={setMyItems}
           myLikedItems={myLikedItems}
