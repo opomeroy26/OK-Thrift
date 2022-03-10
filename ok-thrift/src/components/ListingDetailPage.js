@@ -3,7 +3,7 @@ import ListingDetailCard from './ListingDetailCard'
 
 
 
-function ListingDetailPage({productId, detail, handleReturnToProfile, onAddToCart, onRemoveFromLikes, onUpdateListing, listingToEdit, myLikedItems, myItems}) {
+function ListingDetailPage({productId, detail, handleReturnToProfile, onAddToCart, onRemoveFromLikes, onUpdateListing, listingToEdit, myLikedItems, myItems, onDeleteListing}) {
 
   const detailItem = detail.map((productObj)=> (
       <div>
@@ -19,6 +19,9 @@ function ListingDetailPage({productId, detail, handleReturnToProfile, onAddToCar
 
             myLikedItems={myLikedItems}
             myItems={myItems}
+
+            onDeleteListing = {onDeleteListing}
+            handleReturnToProfile = {handleReturnToProfile}
             
 
           />

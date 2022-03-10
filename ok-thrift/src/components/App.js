@@ -162,6 +162,12 @@ function App() {
       setMyItems(updatedItems)
     }
 
+    function onDeleteListing(product){
+      console.log("here i am on app page")
+      setInventory(inventory.filter((listingItem) => listingItem !== product))
+      setMyItems(myItems.filter((listingItem) => listingItem !== product))
+    }
+
 
   return (
     <div className="container-fluid "  >
@@ -232,6 +238,13 @@ function App() {
 
           myLikedItems={myLikedItems}
           myItems={myItems}
+          setMyItems={setMyItems}
+
+          inventory ={inventory}
+          setInventory={setInventory}
+
+          onDeleteListing ={onDeleteListing}
+
 
           />  
         </Route>
@@ -247,6 +260,9 @@ function App() {
           // onCardClick={onProfileCardClick}
 
           onListingCardClick={onListingCardClick}
+
+          setInventory={setInventory}
+          inventory={inventory}
 
           
           // onLikedCardClick ={onLikedCardClick}
