@@ -4,7 +4,7 @@ import ItemCard from './ItemCard.js'
 import Form from './Form.js'
 import ProfileItemCard from './ProfileItemCard'
 
-function ProfilePage({ myItems, setMyItems, onAddToInventory, onCardClick, myLikedItems, onRemoveFromLikes }){
+function ProfilePage({ myItems, setMyItems, onAddToInventory, onCardClick, myLikedItems, onRemoveFromLikes, onAddToCart }){
     const initialFormState = {
         name: '',
         description: '',
@@ -77,6 +77,7 @@ function ProfilePage({ myItems, setMyItems, onAddToInventory, onCardClick, myLik
             product={productObj}
             handleCardClick = {onCardClick}
             handleRemoveFromLikes ={onRemoveFromLikes}
+            handleAddToCart = {onAddToCart}
         />
        </div>
    )) 
