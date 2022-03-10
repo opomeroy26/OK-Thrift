@@ -21,9 +21,6 @@ function ListingDetailPage({productId, detail, handleReturnToProfile, onAddToCar
             myItems={myItems}
 
             onDeleteListing = {onDeleteListing}
-            handleReturnToProfile = {handleReturnToProfile}
-            
-
           />
       </div>
   ))
