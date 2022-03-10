@@ -1,7 +1,7 @@
 import CartCard from './CartCard.js'
 import '../styles/CartPage.css'
 
-function CartPage({cart, onRemoveFromCart, handleReturnToHome, total, onAddToLikes}){
+function CartPage({cart, onRemoveFromCart, handleReturnToHome, total, onAddToLikes, onCartCardClick}){
     const cartItem = cart.map((productObj)=> (
         
             <CartCard
@@ -9,6 +9,7 @@ function CartPage({cart, onRemoveFromCart, handleReturnToHome, total, onAddToLik
                 product={productObj}
                 handleRemoveFromCart = {onRemoveFromCart}
                 handleAddToLikes = {onAddToLikes}
+                handleCartCardClick = {onCartCardClick}
             />
         
     ))

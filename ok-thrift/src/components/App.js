@@ -7,6 +7,7 @@ import CartPage from "./CartPage";
 import DetailPage from "./DetailPage";
 import ProfilePage from "./ProfilePage";
 import ListingDetailPage from './ListingDetailPage'
+import CartDetailPage from './CartDetailPage'
 import '../styles/index.css'
 import '../styles/SideBar.css'
 import '../styles/App.css'
@@ -16,6 +17,7 @@ function App() {
   const [cart, setCart] = useState([])
   const history = useHistory();
   const [homeItemdetail, setHomeItemDetail] = useState([])
+  const [cartItemDetail, setCartItemDetail] = useState([])
   const [listingDetail, setListingDetail] = useState([])
   const [search, setSearch] = useState("")
   const [sortBy, setSortBy] = useState("All Sizes")
@@ -85,10 +87,16 @@ function App() {
     setListingDetail([product])
   }
 
+
   function onListingCardClick(product, productId){
     history.push('/listingdetail')
     setListingDetail([product])
     setProductId([productId])
+  }
+
+  function onCartCardClick(product){
+    history.push('/cartdetail')
+    setCartItemDetail([product])
   }
 
   function onReturnToHomeClick(){
@@ -98,6 +106,10 @@ function App() {
 
   function onReturnToProfileClick(){
     history.push('/profile')
+  }
+
+  function onReturnToCart(){
+    history.push('/cart')
   }
 
   function onAddToInventory(product){
@@ -181,6 +193,7 @@ function App() {
             handleReturnToHome = {onReturnToHomeClick}
             total={total}
             onAddToLikes={onAddToLikes}
+            onCartCardClick = {onCartCardClick}
           />
         </Route>
       
@@ -193,6 +206,17 @@ function App() {
             onAddToLikes={onAddToLikes}
             inventory={inventory}
             myItems={myItems}
+            
+          />
+        </Route>
+        <Route exact path="/cartdetail">
+          <CartDetailPage 
+            detail={cartItemDetail}
+            onRemoveFromCart = {onRemoveFromCart}
+            onAddToLikes={onAddToLikes}
+            handleReturnToCart ={onReturnToCart}
+
+            
             
           />
         </Route>
