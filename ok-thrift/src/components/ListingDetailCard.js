@@ -23,7 +23,7 @@ function ListingDetailCard({product, handleRemoveFromLikes, handleAddToCart, onU
         event.preventDefault()
 
         handleReturnToProfile()
-        fetch(`http://localhost:3001/mylistings/${productId}`, {
+        fetch(`http://localhost:3000/mylistings/${productId}`, {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json',
@@ -56,55 +56,48 @@ function ListingDetailCard({product, handleRemoveFromLikes, handleAddToCart, onU
     return (
     <div>
         <div className="card mb-3 border-light rounded" id='detail-card' >
-        <div className="row g-0">
-            <div className="col-md-6">
-                <img id='detail-image' src={image} className="img-fluid rounded-start" alt={name}></img>
-            </div>
-            <div className="col-md-6">
-                <div className="card-body h-100 w-100">
+            <div className="row g-0">
+                <div className="col-md-6">
+                    <img id='detail-image' src={image} className="img-fluid rounded-start" alt={name}></img>
+                </div>
+                <div className="col-md-6">
+                    <div className="card-body h-100 w-100">
                     <h5 className="card-title">{name}</h5>
                     <h6 className='card-subtitle text-muted'>Size: {size}</h6>
                     <p className="card-text">{description}</p>
                     <p className="card-text">${price}</p>
-                    <div className = 'row'>
-
-                        
-                        <button 
-                            className='btn-secondary m-2 p-2'
-                            onClick={handleShowForm}> 
-                            {showForm ? 'Hide Form' : 'Edit Listing'}
-                        </button>
+                        <div className = 'row'>
+                            <button 
+                                className='btn-secondary m-2 p-2'
+                                onClick={handleShowForm}> 
+                                {showForm ? 'Hide Form' : 'Edit Listing'}
+                            </button>
                             {showForm ? <EditForm handleChange={handleChange} handleSubmit={handleSubmit} formState={formState} /> : null}
-                        <button onClick={(e)=> onDeleteBtn(e, product)} className='btn-secondary m-2 p-2'>Delete Listing</button>
+                            <button onClick={(e)=> onDeleteBtn(e, product)} className='btn-secondary m-2 p-2'>Delete Listing</button>
+                        </div>
                     </div>
-                    
-                     
-                     
-
                 </div>
-             </div>
-         </div>
+            </div>
         </div>
     </div>
   )
 } else {
     return (
     <div className="card mb-3 border-light rounded" id='detail-card' >
-    <div className="row g-0">
-        <div className="col-md-6">
-            <img id='detail-image' src={image} className="img-fluid rounded-start" alt={name}></img>
-        </div>
+        <div className="row g-0">
+            <div className="col-md-6">
+                <img id='detail-image' src={image} className="img-fluid rounded-start" alt={name}></img>
+            </div>
         <div className="col-md-6">
             <div className="card-body h-100 w-100">
                 <h5 className="card-title">{name}</h5>
                 <h6 className='card-subtitle text-muted'>Size: {size}</h6>
                 <p className="card-text">{description}</p>
                 <p className="card-text">${price}</p>
-                <div className = 'row'>
-                    <button onClick={(e)=> handleAddToCart(e, product)} className="btn btn-secondary">Add to Cart  </button>
-                    <button onClick={(e)=> handleRemoveFromLikes(e, product)} className='btn-secondary'>Remove From Likes</button>
-                    
-                </div>
+                    <div className = 'row'>
+                        <button onClick={(e)=> handleAddToCart(e, product)} className="btn btn-secondary">Add to Cart  </button>
+                        <button onClick={(e)=> handleRemoveFromLikes(e, product)} className='btn-secondary'>Remove From Likes</button>
+                    </div>
             </div>
         </div>
     </div>

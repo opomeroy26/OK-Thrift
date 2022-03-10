@@ -15,13 +15,13 @@ function CartDetailPage({detail, handleReturnToCart, onRemoveFromCart, onAddToLi
     
     return (
         
-        <div  >
-        <div className=' row d-flex justify-content-center m-2 p-2' id='cart'>
-            {detailItem}
-        </div>
-        <div className='row d-flex justify-content-center m-2 p-2' id='cart'>
-            <button onClick={() => handleReturnToCart()} className="btn btn-secondary">Return to Cart</button>
-        </div>
+        <div>
+            <div className=' row d-flex justify-content-center m-2 p-2' id='cart'>
+                {detailItem}
+            </div>
+            <div className='row d-flex justify-content-center m-2 p-2' id='cart'>
+                <button onClick={() => handleReturnToCart()} className="btn btn-secondary">Return to Cart</button>
+            </div>
         </div>
     )
 }

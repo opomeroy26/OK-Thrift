@@ -44,9 +44,7 @@ function DetailCard({product, handleAddToCart, handleCardClick, handleAddToLikes
                 </div>
             </div>
         </div>
-
     </div>
- 
 );
 }
 }

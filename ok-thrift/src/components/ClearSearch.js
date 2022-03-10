@@ -7,7 +7,6 @@ function ClearSearch({handleClearSearch}){
             <button onClick={()=>handleClearSearch()} className='btn-primary'> Clear Search</button>
         </div>
     )
-
 }
 
 export default ClearSearch;

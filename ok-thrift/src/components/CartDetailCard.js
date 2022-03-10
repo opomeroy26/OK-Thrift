@@ -1,5 +1,4 @@
 import React from 'react';
-//import '../styles/DetailCard.css'
 
 function CartDetailCard({product, handleAddToLikes, handleRemoveFromCart}) {
     const {name, description, price, image, size} = product
@@ -23,10 +22,7 @@ function CartDetailCard({product, handleAddToLikes, handleRemoveFromCart}) {
                 </div>
             </div>
         </div>
-
     </div>
- 
-  
 );
 }
 

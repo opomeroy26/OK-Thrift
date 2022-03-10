@@ -13,10 +13,10 @@ function CartCard({product, handleRemoveFromCart, handleAddToLikes, handleCartCa
                     <p className="card-text-item">{description}</p>
                     
                     <p className="price">${price}</p>
-                <div className='row'> 
-                    <button onClick={(e)=>handleRemoveFromCart(e, product)} className="btn btn-secondary">Remove From Cart</button>
-                    <button onClick={(e)=> handleAddToLikes(e, product)} className='btn-secondary'>Add to Likes </button>
-                </div>
+                    <div className='row'> 
+                        <button onClick={(e)=>handleRemoveFromCart(e, product)} className="btn btn-secondary">Remove From Cart</button>
+                        <button onClick={(e)=> handleAddToLikes(e, product)} className='btn-secondary'>Add to Likes </button>
+                    </div>
                 </div>
             </div>
        

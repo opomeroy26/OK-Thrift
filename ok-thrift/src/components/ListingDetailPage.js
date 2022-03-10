@@ -32,7 +32,6 @@ function ListingDetailPage({productId, detail, handleReturnToProfile, onAddToCar
         <div className='row d-flex justify-content-center m-2 p-2'>
             {detailItem}
         </div>
-        
     </div>
   )
 }
