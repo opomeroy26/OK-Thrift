@@ -92,9 +92,9 @@ function App() {
   }
 
   const searchedInventory = inventory
-    .filter((product) => 
-    product.description.toLowerCase().includes(search.toLowerCase())
-  )
+    .filter((product)=> 
+      product.description.toLowerCase().includes(search.toLowerCase()) || product.name.toLowerCase().includes(search.toLowerCase())
+    )
 
     .filter((product) => {
       if (sortBy === "All Sizes") {
@@ -108,8 +108,6 @@ function App() {
     function onClearSearch(product){
       setSearch("")
     }
-
-
 
   return (
     <div className="container-fluid "  >
