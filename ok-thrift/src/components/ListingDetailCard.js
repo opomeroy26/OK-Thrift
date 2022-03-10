@@ -21,6 +21,7 @@ function ListingDetailCard({product, handleRemoveFromLikes, handleAddToCart, onU
       function handleSubmit(event,){
         console.log()
         event.preventDefault()
+
         handleReturnToProfile()
         fetch(`http://localhost:3001/mylistings/${productId}`, {
           method: 'PATCH',
