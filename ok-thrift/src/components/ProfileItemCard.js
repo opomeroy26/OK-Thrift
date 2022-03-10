@@ -11,8 +11,10 @@ function ProfileItemCard({product, handleCardClick, handleRemoveFromLikes, handl
        <p className="card-text-item">{description}</p>
        
        <p className="price">${price}</p>
-       <button onClick={(e)=> handleRemoveFromLikes(e, product)} className='btn-secondary'>Remove From Likes</button>
-       <button onClick={(e)=> handleAddToCart(e, product)} className="btn btn-secondary">Add to Cart  </button>
+       <div className ='row'>
+        <button onClick={(e)=> handleAddToCart(e, product)} className="btn btn-secondary">Add to Cart  </button>
+        <button onClick={(e)=> handleRemoveFromLikes(e, product)} className='btn-secondary'>Remove From Likes</button>
+       </div>
        
    </div> 
 </div>
