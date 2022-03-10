@@ -1,7 +1,7 @@
 import React from 'react';
 import DetailCard from "./DetailCard";
 
-function DetailPage({detail, handleReturnToHome, onAddToCart, handleReturnToCart, onAddToLikes, inventory, myItems}){
+function DetailPage({detail, handleReturnToHome, onAddToCart, onAddToLikes, inventory, myItems}){
     const detailItem = detail.map((productObj)=> (
         <div>
             <DetailCard
