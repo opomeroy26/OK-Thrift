@@ -44,7 +44,7 @@ function ProfilePage({ myItems, setMyItems, onAddToInventory, onAddToListings, o
             alert('Please enter a description')
         }
         else {
-       fetch('http://localhost:3000/mylistings', {
+       fetch('http://localhost:3001/mylistings', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

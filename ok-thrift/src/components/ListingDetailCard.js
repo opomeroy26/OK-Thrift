@@ -2,7 +2,7 @@ import React,{ useState } from 'react'
 import EditForm from './EditForm'
 
 
-function ListingDetailCard({product, handleRemoveFromLikes, handleAddToCart, onUpdateListing, productId, myItems}) {
+function ListingDetailCard({product, handleRemoveFromLikes, handleAddToCart, onUpdateListing, productId, myItems, handleReturnToProfile}) {
     const initialFormState = {
         name: '',
         description: '',
@@ -21,6 +21,7 @@ function ListingDetailCard({product, handleRemoveFromLikes, handleAddToCart, onU
       function handleSubmit(event,){
         console.log()
         event.preventDefault()
+        handleReturnToProfile()
         fetch(`http://localhost:3001/mylistings/${productId}`, {
           method: 'PATCH',
           headers: {
@@ -74,7 +75,7 @@ function ListingDetailCard({product, handleRemoveFromLikes, handleAddToCart, onU
              </div>
          </div>
         </div>
-    
+    </div>
   )
 } else {
     return (

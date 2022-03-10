@@ -26,14 +26,14 @@ function App() {
 
 
   useEffect(()=> {
-    fetch("http://localhost:3000/inventory")
+    fetch("http://localhost:3001/inventory")
     .then((resp) => resp.json())
     .then(setInventory)
   }, [])
 
 
   useEffect(()=> {
-    fetch('http://localhost:3000/mylistings')
+    fetch('http://localhost:3001/mylistings')
     .then((resp) => resp.json())
     .then(setMyItems)
   }, [])
@@ -146,7 +146,7 @@ function App() {
           return originalListing
         }
       })
-      setInventory(updatedListings)
+      //setInventory(updatedListings)
       setMyItems(updatedItems)
     }
 

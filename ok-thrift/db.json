@@ -83,11 +83,11 @@
   ],
   "mylistings": [
     {
-      "name": "hat",
-      "description": "gray hat, seen some  use but still has a lot of life left.",
-      "image": "https://images.unsplash.com/photo-1521369909029-2afed882baee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+      "name": "Hat",
+      "description": "gray hat, well worn but has some life left. ",
+      "image": "https://images.unsplash.com/photo-1521369909029-2afed882baee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
       "price": "5",
-      "size": "NA",
+      "size": "",
       "id": 1
     }
   ]
