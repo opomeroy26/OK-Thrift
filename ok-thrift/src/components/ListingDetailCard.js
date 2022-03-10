@@ -1,6 +1,43 @@
-import React from 'react'
+import React,{ useState } from 'react'
+import EditForm from './EditForm'
 
-function ListingDetailCard({product, handleRemoveFromLikes, handleAddToCart}) {
+function ListingDetailCard({product, handleRemoveFromLikes, handleAddToCart, onUpdateListing, productId}) {
+    const initialFormState = {
+        name: '',
+        description: '',
+        image: '',
+        price:'',
+        size:''
+    }
+    const [showForm, setShowForm] = useState(false)
+    const [formState, setFormState]= useState(initialFormState)
+    
+    
+    const handleChange =(event) => {
+        const {name, value} = event.target;
+        setFormState(formState => ({...formState, [name]: value}))
+      }
+      function handleSubmit(event,){
+        console.log()
+        event.preventDefault()
+        fetch(`http://localhost:3001/mylistings/${productId}`, {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formState),
+        })
+        .then(res => res.json())
+        .then(updatedListing => {
+          onUpdateListing(updatedListing)
+        })
+      }
+      function handleShowForm(){
+        setShowForm(!showForm)
+        
+      }
+    
+    
     const {name, description, price, image, size} = product
     return (
         <div className="card mb-3 border-light rounded" id='detail-card' >
@@ -15,10 +52,18 @@ function ListingDetailCard({product, handleRemoveFromLikes, handleAddToCart}) {
                     <p className="card-text">{description}</p>
                     <p className="card-text">${price}</p>
                     <div className = 'row'>
-                        <button onClick={(e)=> handleAddToCart(e, product)} className="btn btn-secondary">Add to Cart  </button>
-                        <button onClick={(e)=> handleRemoveFromLikes(e, product)} className='btn-secondary'>Remove From Likes</button>
-                        
+                        <button onClick={(e)=> handleAddToCart(e, product)} className="btn btn-secondary m-2 p-2">Add to Cart  </button>
+                        <button onClick={(e)=> handleRemoveFromLikes(e, product)} className='btn-secondary m-2 p-2'>Remove From Likes</button>
+                        <button 
+                            className='btn-secondary m-2 p-2'
+                            onClick={handleShowForm}> 
+                            {showForm ? 'Hide Form' : 'Edit Listing'}
+                        </button>
+                            {showForm ? <EditForm handleChange={handleChange} handleSubmit={handleSubmit} formState={formState} /> : null}
                     </div>
+                    
+                     
+                     
                 </div>
             </div>
         </div>

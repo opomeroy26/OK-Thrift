@@ -1,7 +1,8 @@
 import React from 'react'
 import ListingDetailCard from './ListingDetailCard'
 
-function ListingDetailPage({detail, handleReturnToProfile, onAddToCart, onRemoveFromLikes}) {
+
+function ListingDetailPage({productId, detail, handleReturnToProfile, onAddToCart, onRemoveFromLikes, onUpdateListing, listingToEdit}) {
   const detailItem = detail.map((productObj)=> (
       <div>
           <ListingDetailCard 
@@ -9,22 +10,21 @@ function ListingDetailPage({detail, handleReturnToProfile, onAddToCart, onRemove
             product={productObj}
             handleAddToCart={onAddToCart}
             handleRemoveFromLikes={onRemoveFromLikes}
-            
+            onUpdateListing={onUpdateListing}
+            listingToEdit={listingToEdit}
+            productId={productId}
           />
       </div>
   ))
-  
-  
-  
-  
     return (
     <div>
-        <div className='row d-flex justify-content-center m-2 p-2' id='cart'>
+        <div className='row d-flex justify-content-center m-2 p-2'>
             <button onClick={() => handleReturnToProfile()} className="btn btn-secondary"> Back to profile </button>
         </div>
-        <div className='row d-flex justify-content-center m-2 p-2' id='cart'>
+        <div className='row d-flex justify-content-center m-2 p-2'>
             {detailItem}
         </div>
+        
     </div>
   )
 }
