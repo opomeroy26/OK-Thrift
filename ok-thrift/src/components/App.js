@@ -55,6 +55,13 @@ function App() {
     }
   }
 
+  function onRemoveFromLikes(e, product) {
+    console.log("remove from likes", product)
+    e.stopPropagation();
+    setMyLikedItems(myLikedItems.filter((productCard) => productCard !== product))
+
+  }
+
   
 
   function onRemoveFromCart(e, product){
@@ -161,6 +168,7 @@ function App() {
           myItems={myItems}
           setMyItems={setMyItems}
           myLikedItems={myLikedItems}
+          onRemoveFromLikes={onRemoveFromLikes}
           />
         </Route>
       </Switch>

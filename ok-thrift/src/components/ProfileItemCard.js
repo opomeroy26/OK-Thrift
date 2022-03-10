@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ProfileItemCard({product, handleCardClick}) {
+function ProfileItemCard({product, handleCardClick, handleRemoveFromLikes}) {
     const {name, description, price, image, size} = product
     return (
     <div onClick={()=> handleCardClick(product)} className="card border-light col-4  p-2 m-2 item" >
@@ -11,6 +11,7 @@ function ProfileItemCard({product, handleCardClick}) {
        <p className="card-text-item">{description}</p>
        
        <p className="price">${price}</p>
+       <button onClick={(e)=> handleRemoveFromLikes(e, product)}>Remove From Likes</button>
        
    </div> 
 </div>
