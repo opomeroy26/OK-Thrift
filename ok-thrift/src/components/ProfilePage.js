@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import '../styles/ProfilePage.css'
-import ItemCard from './ItemCard.js'
 import Form from './Form.js'
 import ProfileItemCard from './ProfileItemCard'
 
