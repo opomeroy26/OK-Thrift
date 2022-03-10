@@ -79,14 +79,6 @@
       "price": "31.00",
       "description": "New men's boots. Size 11. Never been worn.",
       "size": "10"
-    },
-    {
-      "name": "Testing",
-      "description": "Testing",
-      "image": "Testing",
-      "price": "3",
-      "size": "Medium",
-      "id": 11
     }
   ]
 }
