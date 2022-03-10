@@ -14,8 +14,8 @@ function DetailPage({detail, handleReturnToHome, onAddToCart, handleReturnToCart
     
     return (
         
-        <div>
-        <div className='row d-flex justify-content-center m-2 p-2' id='cart'>
+        <div  >
+        <div className=' row d-flex justify-content-center m-2 p-2' id='cart'>
             {detailItem}
         </div>
         <div className='row d-flex justify-content-center m-2 p-2' id='cart'>
