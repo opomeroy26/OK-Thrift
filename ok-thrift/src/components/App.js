@@ -22,12 +22,20 @@ function App() {
   const [myItems, setMyItems] = useState([])
   const [total, setTotal] = useState(0)
   const [myLikedItems, setMyLikedItems] = useState([])
+  const [productId, setProductId] = useState('')
 
 
   useEffect(()=> {
-    fetch("http://localhost:3000/inventory")
+    fetch("http://localhost:3001/inventory")
     .then((resp) => resp.json())
     .then(setInventory)
+  }, [])
+
+
+  useEffect(()=> {
+    fetch('http://localhost:3001/mylistings')
+    .then((resp) => resp.json())
+    .then(setMyItems)
   }, [])
 
   useEffect(() => {
@@ -77,6 +85,12 @@ function App() {
     setListingDetail([product])
   }
 
+  function onListingCardClick(product, productId){
+    history.push('/listingdetail')
+    setListingDetail([product])
+    setProductId([productId])
+  }
+
   function onReturnToHomeClick(){
     history.push("/")
 
@@ -89,6 +103,10 @@ function App() {
   function onAddToInventory(product){
     setInventory([...inventory, product])
 
+  }
+
+  function onAddToListings(product){
+    setMyItems([...myItems, product])
   }
 
   const searchedInventory = inventory
@@ -105,9 +123,33 @@ function App() {
       }
     })
 
+
+
     function onClearSearch(product){
       setSearch("")
     }
+
+  
+  
+    function onUpdateListing(updatedListing){
+      const updatedListings = inventory.map(originalListing => {
+        if (updatedListing.id === originalListing.id) {
+          return updatedListing
+        } else {
+          return originalListing
+        }
+      })
+      const updatedItems = myItems.map(originalListing => {
+        if (updatedListing.id === originalListing.id) {
+          return updatedListing
+        } else {
+          return originalListing
+        }
+      })
+      
+      setMyItems(updatedItems)
+    }
+
 
   return (
     <div className="container-fluid "  >
@@ -159,18 +201,27 @@ function App() {
           handleReturnToProfile = {onReturnToProfileClick}
           onAddToCart = {onAddToCart}
           onRemoveFromLikes={onRemoveFromLikes}
+
+          onUpdateListing={onUpdateListing}
+          productId={productId}
+
           myLikedItems={myLikedItems}
           myItems={myItems}
 
-          
           />  
         </Route>
     
         <Route exact path="/profile">
           <ProfilePage 
           onAddToInventory={onAddToInventory} 
+
+          onAddToListings={onAddToListings}
+          onCardClick={onProfileCardClick}
+          onListingCardClick={onListingCardClick}
+
           onCardClick={onCardClick}
           // onLikedCardClick ={onLikedCardClick}
+
           myItems={myItems}
           setMyItems={setMyItems}
           myLikedItems={myLikedItems}

@@ -4,7 +4,9 @@ import Form from './Form.js'
 import ProfileItemCard from './ProfileItemCard'
 import LikeItemCard from './LikeItemCard'
 
-function ProfilePage({ myItems, setMyItems, onAddToInventory, onCardClick, myLikedItems, onRemoveFromLikes, onAddToCart, onLikedCardClick }){
+
+function ProfilePage({ myItems, setMyItems, onAddToInventory, onAddToListings, onCardClick, onListingCardClick, myLikedItems, onRemoveFromLikes, onAddToCart,  onLikedCardClick }){
+
     const initialFormState = {
         name: '',
         description: '',
@@ -42,7 +44,7 @@ function ProfilePage({ myItems, setMyItems, onAddToInventory, onCardClick, myLik
             alert('Please enter a description')
         }
         else {
-        fetch('http://localhost:3000/inventory', {
+       fetch('http://localhost:3001/mylistings', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -50,20 +52,27 @@ function ProfilePage({ myItems, setMyItems, onAddToInventory, onCardClick, myLik
                 body: JSON.stringify(formState),
             })
             .then(onAddToInventory(formState))
+            .then(onAddToListings(formState))
             .then(setFormState(initialFormState))
-            .then(setMyItems([...myItems, formState]) )
-            console.log('I am fetching')
+            .then(setMyItems([...myItems, formState]))
+        
+        
+            
+
         }   
     }
     
-   const newItem = myItems.map((productObj)=> (
-    <div>
-        <ProfileItemCard 
-            key={productObj.id + productObj.name}
-            product={productObj}
-            handleCardClick = {onCardClick}
-        />
-    </div>
+   
+
+   const myItemsCard = myItems.map((productObj) => (
+        <div>
+            <ProfileItemCard 
+                key={productObj.id + productObj.name}
+                product={productObj}
+                handleCardClick = {onListingCardClick}
+                productId={productObj.id}
+            />
+        </div>
    ))
     
 
@@ -119,7 +128,8 @@ function ProfilePage({ myItems, setMyItems, onAddToInventory, onCardClick, myLik
                
             <div id='currentListings'>
                 <h4 className='p-2 m-2'>Active Listings</h4> {/* When you add a new listing it should add to a list here, removing one will also update here*/}
-                {newItem}
+            
+                {myItemsCard}
             </div>
         </div>
     )
