@@ -128,6 +128,7 @@ function App() {
             onAddToCart = {onAddToCart}
             onCardClick = {onHomeCardClick}
             onAddToLikes ={onAddToLikes}
+            myItems = {myItems}
           />
         </Route>
       
