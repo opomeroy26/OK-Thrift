@@ -180,6 +180,7 @@ function App() {
             onRemoveFromCart = {onRemoveFromCart}
             handleReturnToHome = {onReturnToHomeClick}
             total={total}
+            onAddToLikes={onAddToLikes}
           />
         </Route>
       
