@@ -28,17 +28,17 @@ function DetailCard({product, handleAddToCart, handleCardClick, handleAddToLikes
 
     return (
 
-    <div class="card mb-3 border-light rounded" id='detail-card' >
-        <div class="row g-0">
-            <div class="col-md-6">
-                <img id='detail-image' src={image} class="img-fluid rounded-start" alt={name}></img>
+    <div className="card mb-3 border-light rounded" id='detail-card' >
+        <div className="row g-0">
+            <div className="col-md-6">
+                <img id='detail-image' src={image} className="img-fluid rounded-start" alt={name}></img>
             </div>
-            <div class="col-md-6">
-                <div class="card-body h-100 w-100">
-                    <h5 class="card-title">{name}</h5>
-                    <h6 class='card-subtitle text-muted'>Size: {size}</h6>
-                    <p class="card-text">{description}</p>
-                    <p class="card-text">${price}</p>
+            <div className="col-md-6">
+                <div className="card-body h-100 w-100">
+                    <h5 className="card-title">{name}</h5>
+                    <h6 className='card-subtitle text-muted'>Size: {size}</h6>
+                    <p className="card-text">{description}</p>
+                    <p className="card-text">${price}</p>
                     <button onClick={(e)=> handleAddToCart(e, product)} className="btn btn-secondary">Add to Cart 🛒 </button> 
                     <button onClick={(e)=> handleAddToLikes(e, product)} className='btn-secondary'> Add to Likes </button>
                 </div>

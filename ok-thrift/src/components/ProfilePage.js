@@ -44,7 +44,7 @@ function ProfilePage({ myItems, setMyItems, onAddToInventory, onAddToListings, o
             alert('Please enter a description')
         }
         else {
-       fetch('http://localhost:3000/mylistings', {
+       fetch('http://localhost:3001/mylistings', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -63,7 +63,7 @@ function ProfilePage({ myItems, setMyItems, onAddToInventory, onAddToListings, o
    
 
    const myItemsCard = myItems.map((productObj) => (
-        <div>
+        
             <ProfileItemCard 
                 key={productObj.id + productObj.name}
                 product={productObj}
@@ -71,12 +71,12 @@ function ProfilePage({ myItems, setMyItems, onAddToInventory, onAddToListings, o
                 productId={productObj.id}
                 
             />
-        </div>
+        
    ))
     
 
    const likedItem = myLikedItems.map((productObj)=> (
-       <div>   
+         
            <LikeItemCard
             key={productObj.id + productObj.name}
             product={productObj}
@@ -84,7 +84,7 @@ function ProfilePage({ myItems, setMyItems, onAddToInventory, onAddToListings, o
             handleRemoveFromLikes ={onRemoveFromLikes}
             handleAddToCart = {onAddToCart}
         />
-       </div>
+       
    )) 
     function handleShowForm() {
         setShowForm(!showForm)
@@ -120,14 +120,16 @@ function ProfilePage({ myItems, setMyItems, onAddToInventory, onAddToListings, o
                 </button>
 
                 {showForm ? <Form handleChange={handleChange} handleSubmit={handleSubmit} formState={formState} /> : null}
-                {showLikes ? likedItem : null}
-           
+                <div className='row m-2 p-2' id='likes'>
+                    {showLikes ? likedItem : null}
+                </div>
             
                
             <div id='currentListings'>
                 <h4 className='p-2 m-2'>Active Listings</h4> {/* When you add a new listing it should add to a list here, removing one will also update here*/}
-            
-                {myItemsCard}
+                <div className='row m-2 p-2' id='listings'>
+                    {myItemsCard}
+                </div>
             </div>
         </div>
     )

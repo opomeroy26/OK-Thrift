@@ -12,7 +12,7 @@ function ListingDetailPage({productId, detail, handleReturnToProfile, onAddToCar
             product={productObj}
             handleAddToCart={onAddToCart}
             handleRemoveFromLikes={onRemoveFromLikes}
-
+            handleReturnToProfile={handleReturnToProfile}
             onUpdateListing={onUpdateListing}
             listingToEdit={listingToEdit}
             productId={productId}
