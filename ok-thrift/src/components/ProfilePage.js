@@ -41,11 +41,8 @@ function ProfilePage({ myItems, setMyItems, onAddToInventory, onCardClick, myLik
         else if(formState.description === '') {
             alert('Please enter a description')
         }
-        else if(formState.size ===  ''){
-            alert('Please choose a size')
-        }
         else {
-        fetch('http://localhost:3001/inventory', {
+        fetch('http://localhost:3000/inventory', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

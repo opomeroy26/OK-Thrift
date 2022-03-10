@@ -63,6 +63,7 @@ function Form({handleSubmit, handleChange, formState}) {
                                             value={formState.size}
                                             onChange={handleChange}
                                             name='size'>
+                                                <option value="NA">NA</option>
                                                 <option value='XS'>XS</option>
                                                 <option value='S'>S</option>
                                                 <option value='M'>M</option>
