@@ -1,16 +1,22 @@
 import React from 'react'
 
 function ListingDetailCard({product}) {
-    const {name, description, price, image} = product
+    const {name, description, price, image, size} = product
     return (
-    <div className="card-detail col-12  p-2 m-2">
-        <img className="card-img-top-detail image" src={image} alt= {name}/>
-        <div className="card-body h-100">
-            <h5 className="card-title">{name}</h5>
-            <p className="card-text">{description}</p>
-            <p className="price">${price}</p>
-            
-        </div> 
+        <div class="card mb-3 border-light rounded" id='detail-card' >
+        <div class="row g-0">
+            <div class="col-md-6">
+                <img id='detail-image' src={image} class="img-fluid rounded-start" alt={name}></img>
+            </div>
+            <div class="col-md-6">
+                <div class="card-body h-100 w-100">
+                    <h5 class="card-title">{name}</h5>
+                    <h6 class='card-subtitle text-muted'>Size: {size}</h6>
+                    <p class="card-text">{description}</p>
+                    <p class="card-text">${price}</p>
+                </div>
+            </div>
+        </div>
     </div>
   )
 }

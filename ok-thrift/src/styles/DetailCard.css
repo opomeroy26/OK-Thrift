@@ -1,9 +1,10 @@
-.card-img-top-detail {
-    width: 480px;
-    height: 500px;
-    object-fit: cover;
+#detail-image {
+    width:480px;
+    height:500px;
+    object-fit:cover;
 }
 
-.card-detail {
-    width:500px;
+#detail-card {
+    width:60rem;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
