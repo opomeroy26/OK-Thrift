@@ -22,16 +22,16 @@ function Filter ({sortBy, onSortBy}) {
                     <option value="Small">Small</option>
                     <option value="Medium">Medium</option>
                     <option value="Large">Large</option>
-                    <option value ="1">Extra Large</option>
-                    <option value ="2">Extra Large</option>
-                    <option value ="3">Extra Large</option>
-                    <option value ="4">Extra Large</option>
-                    <option value ="5">Extra Large</option>
-                    <option value ="6">Extra Large</option>
-                    <option value ="7">Extra Large</option>
-                    <option value ="8">Extra Large</option>
-                    <option value ="9">Extra Large</option>
-                    <option value ="10">Extra Large</option>
+                    <option value ="1">1</option>
+                    <option value ="2">2</option>
+                    <option value ="3">3</option>
+                    <option value ="4">4</option>
+                    <option value ="5">5</option>
+                    <option value ="6">6</option>
+                    <option value ="7">7</option>
+                    <option value ="8">8</option>
+                    <option value ="9">9</option>
+                    <option value ="10">10</option>
                 </select>
             
             </div>
