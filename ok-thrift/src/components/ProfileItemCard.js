@@ -11,7 +11,7 @@ function ProfileItemCard({product, handleCardClick, handleRemoveFromLikes}) {
        <p className="card-text-item">{description}</p>
        
        <p className="price">${price}</p>
-       <button onClick={(e)=> handleRemoveFromLikes(e, product)}>Remove From Likes</button>
+       <button onClick={(e)=> handleRemoveFromLikes(e, product)} className='btn-secondary'>Remove From Likes</button>
        
    </div> 
 </div>
