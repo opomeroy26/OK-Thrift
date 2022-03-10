@@ -148,6 +148,8 @@ function App() {
             onAddToCart = {onAddToCart}
             onRemoveFromCart = {onRemoveFromCart}
             onAddToLikes={onAddToLikes}
+            inventory={inventory}
+            myItems={myItems}
             
           />
         </Route>
