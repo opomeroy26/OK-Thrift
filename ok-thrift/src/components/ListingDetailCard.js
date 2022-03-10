@@ -14,8 +14,11 @@ function ListingDetailCard({product, handleRemoveFromLikes, handleAddToCart}) {
                     <h6 className='card-subtitle text-muted'>Size: {size}</h6>
                     <p className="card-text">{description}</p>
                     <p className="card-text">${price}</p>
-                    <button onClick={(e)=> handleRemoveFromLikes(e, product)} className='btn-secondary'>Remove From Likes</button>
-                    <button onClick={(e)=> handleAddToCart(e, product)} className="btn btn-secondary">Add to Cart  </button>
+                    <div className = 'row'>
+                        <button onClick={(e)=> handleAddToCart(e, product)} className="btn btn-secondary">Add to Cart  </button>
+                        <button onClick={(e)=> handleRemoveFromLikes(e, product)} className='btn-secondary'>Remove From Likes</button>
+                        
+                    </div>
                 </div>
             </div>
         </div>
