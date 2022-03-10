@@ -10,7 +10,7 @@ function ProfileItemCard({product, handleCardClick}) {
        <h6 className='card-subtitle md-2 text-muted'>Size: {size}</h6>
        <p className="card-text-item">{description}</p>
        
-       <p className="price">{price}</p>
+       <p className="price">${price}</p>
        
    </div> 
 </div>
