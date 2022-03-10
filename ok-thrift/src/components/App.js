@@ -58,6 +58,7 @@ function App() {
   function onRemoveFromLikes(e, product) {
     e.stopPropagation();
     setMyLikedItems(myLikedItems.filter((productCard) => productCard !== product))
+    history.push("/profile")
 
   }
 
@@ -154,6 +155,9 @@ function App() {
           <ListingDetailPage
           detail={listingDetail}
           handleReturnToProfile = {onReturnToProfileClick}
+          onAddToCart = {onAddToCart}
+          onRemoveFromLikes={onRemoveFromLikes}
+
           
           />  
         </Route>
