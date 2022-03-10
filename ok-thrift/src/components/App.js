@@ -25,7 +25,7 @@ function App() {
 
 
   useEffect(()=> {
-    fetch("http://localhost:3001/inventory")
+    fetch("http://localhost:3000/inventory")
     .then((resp) => resp.json())
     .then(setInventory)
   }, [])
@@ -100,6 +100,10 @@ function App() {
       }
     })
 
+    function onClearSearch(product){
+      setSearch("")
+    }
+
 
 
   return (
@@ -109,6 +113,7 @@ function App() {
         onSearch={setSearch}
         sortBy={sortBy}
         onSortBy = {setSortBy}
+        onClearSearch = {onClearSearch}
       /> 
       
       <div className='content row'  style={{ marginLeft: '200px', marginRight: '25px' }}>

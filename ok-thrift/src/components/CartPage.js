@@ -17,7 +17,7 @@ function CartPage({cart, onRemoveFromCart, handleReturnToHome, total}){
              {cartItem}
             </div>
             <div className='row d-flex justify-content-center m-2 p-2'>
-                <button className='btn-primary'> Subtotal: {total.toFixed(2)}</button>
+                <button className='btn-primary'> Subtotal: ${total.toFixed(2)}</button>
             </div>
             <div className='row d-flex justify-content-center m-2 p-2' id='cart'>
                 <button onClick={() => handleReturnToHome()} className="btn btn-secondary">Continue Shopping </button>
