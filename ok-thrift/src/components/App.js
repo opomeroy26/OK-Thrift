@@ -80,7 +80,7 @@ function App() {
     setHomeItemDetail([product])
   }
 
-  function onProfileCardClick(product){
+  function onCardClick(product){
     history.push('/listingdetail')
     setListingDetail([product])
   }
@@ -110,9 +110,9 @@ function App() {
   }
 
   const searchedInventory = inventory
-    .filter((product) => 
-    product.description.toLowerCase().includes(search.toLowerCase())
-  )
+    .filter((product)=> 
+      product.description.toLowerCase().includes(search.toLowerCase()) || product.name.toLowerCase().includes(search.toLowerCase())
+    )
 
     .filter((product) => {
       if (sortBy === "All Sizes") {
@@ -128,7 +128,9 @@ function App() {
     function onClearSearch(product){
       setSearch("")
     }
-    
+
+  
+  
     function onUpdateListing(updatedListing){
       const updatedListings = inventory.map(originalListing => {
         if (updatedListing.id === originalListing.id) {
@@ -168,6 +170,7 @@ function App() {
             onAddToCart = {onAddToCart}
             onCardClick = {onHomeCardClick}
             onAddToLikes ={onAddToLikes}
+            myItems = {myItems}
           />
         </Route>
       
@@ -186,6 +189,9 @@ function App() {
             handleReturnToHome = {onReturnToHomeClick}
             onAddToCart = {onAddToCart}
             onRemoveFromCart = {onRemoveFromCart}
+            onAddToLikes={onAddToLikes}
+            inventory={inventory}
+            myItems={myItems}
             
           />
         </Route>
@@ -195,17 +201,27 @@ function App() {
           handleReturnToProfile = {onReturnToProfileClick}
           onAddToCart = {onAddToCart}
           onRemoveFromLikes={onRemoveFromLikes}
+
           onUpdateListing={onUpdateListing}
           productId={productId}
+
+          myLikedItems={myLikedItems}
+          myItems={myItems}
+
           />  
         </Route>
-
+    
         <Route exact path="/profile">
           <ProfilePage 
           onAddToInventory={onAddToInventory} 
+
           onAddToListings={onAddToListings}
           onCardClick={onProfileCardClick}
           onListingCardClick={onListingCardClick}
+
+          onCardClick={onCardClick}
+          // onLikedCardClick ={onLikedCardClick}
+
           myItems={myItems}
           setMyItems={setMyItems}
           myLikedItems={myLikedItems}

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function LikeItemCard({product, handleCardClick, handleRemoveFromLikes, handleAddToCart}) {
+function LikeItemCard({product, handleCardClick, handleRemoveFromLikes, handleAddToCart, handleLikedCardClick}) {
     const {name, description, price, image, size} = product
     return (
     <div onClick={()=> handleCardClick(product)} className="card border-light col-4  p-2 m-2 item" >

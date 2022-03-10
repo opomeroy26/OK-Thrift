@@ -2,7 +2,7 @@ import ItemCard from './ItemCard.js';
 import React from "react";
 
 
-function HomePage({inventory, onAddToCart, onCardClick, onAddToLikes}){
+function HomePage({inventory, onAddToCart, onCardClick, onAddToLikes, myItems}){
     const product = inventory.map((productObj)=> (
         
             <ItemCard 
@@ -11,6 +11,10 @@ function HomePage({inventory, onAddToCart, onCardClick, onAddToLikes}){
                 handleAddToCart = {onAddToCart}
                 handleCardClick = {onCardClick}
                 handleAddToLikes ={onAddToLikes}
+                myItems={myItems}
+                inventory={inventory}
+
+
             />
         
     ))

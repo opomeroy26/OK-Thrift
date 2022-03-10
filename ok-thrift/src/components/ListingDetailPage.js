@@ -2,17 +2,25 @@ import React from 'react'
 import ListingDetailCard from './ListingDetailCard'
 
 
-function ListingDetailPage({productId, detail, handleReturnToProfile, onAddToCart, onRemoveFromLikes, onUpdateListing, listingToEdit}) {
+
+function ListingDetailPage({productId, detail, handleReturnToProfile, onAddToCart, onRemoveFromLikes, onUpdateListing, listingToEdit, myLikedItems, myItems}) {
+
   const detailItem = detail.map((productObj)=> (
       <div>
-          <ListingDetailCard 
+          <ListingDetailCard
             key={productObj.id + productObj.name}
             product={productObj}
             handleAddToCart={onAddToCart}
             handleRemoveFromLikes={onRemoveFromLikes}
+
             onUpdateListing={onUpdateListing}
             listingToEdit={listingToEdit}
             productId={productId}
+
+            myLikedItems={myLikedItems}
+            myItems={myItems}
+            
+
           />
       </div>
   ))
