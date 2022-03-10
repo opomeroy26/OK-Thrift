@@ -146,7 +146,7 @@ function App() {
           return originalListing
         }
       })
-      
+      setInventory(updatedListings)
       setMyItems(updatedItems)
     }
 
@@ -216,10 +216,10 @@ function App() {
           onAddToInventory={onAddToInventory} 
 
           onAddToListings={onAddToListings}
-          onCardClick={onProfileCardClick}
+          onCardClick={onCardClick}
           onListingCardClick={onListingCardClick}
 
-          onCardClick={onCardClick}
+          
           // onLikedCardClick ={onLikedCardClick}
 
           myItems={myItems}

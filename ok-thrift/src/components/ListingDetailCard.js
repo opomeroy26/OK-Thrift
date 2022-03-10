@@ -2,7 +2,7 @@ import React,{ useState } from 'react'
 import EditForm from './EditForm'
 
 
-function ListingDetailCard({product, handleRemoveFromLikes, handleAddToCart, onUpdateListing, productId}) {
+function ListingDetailCard({product, handleRemoveFromLikes, handleAddToCart, onUpdateListing, productId, myItems}) {
     const initialFormState = {
         name: '',
         description: '',
@@ -57,8 +57,7 @@ function ListingDetailCard({product, handleRemoveFromLikes, handleAddToCart, onU
                     <p className="card-text">${price}</p>
                     <div className = 'row'>
 
-                        <button onClick={(e)=> handleAddToCart(e, product)} className="btn btn-secondary m-2 p-2">Add to Cart  </button>
-                        <button onClick={(e)=> handleRemoveFromLikes(e, product)} className='btn-secondary m-2 p-2'>Remove From Likes</button>
+                        
                         <button 
                             className='btn-secondary m-2 p-2'
                             onClick={handleShowForm}> 
@@ -74,7 +73,7 @@ function ListingDetailCard({product, handleRemoveFromLikes, handleAddToCart, onU
              </div>
          </div>
         </div>
-    </div>
+    
   )
 } else {
     return (
