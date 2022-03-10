@@ -1,8 +1,8 @@
 import React,{ useState } from 'react'
 import EditForm from './EditForm'
 
+function ListingDetailCard({product, handleRemoveFromLikes, handleAddToCart, onUpdateListing, productId, myItems, onDeleteClick, onDeleteListing, handleReturnToProfile}) {
 
-function ListingDetailCard({product, handleRemoveFromLikes, handleAddToCart, onUpdateListing, productId, myItems, handleReturnToProfile}) {
     const initialFormState = {
         name: '',
         description: '',
@@ -39,6 +39,14 @@ function ListingDetailCard({product, handleRemoveFromLikes, handleAddToCart, onU
         setShowForm(!showForm)
         
       }
+
+      function onDeleteBtn(e, product){
+          e.stopPropagation();
+          console.log("deleting from listing", product )
+          handleReturnToProfile()
+          fetch(`http://localhost:3000/mylistings/${product.id}`, {method: "DELETE"})
+          onDeleteListing(product)
+      };
     
     
 
@@ -67,6 +75,7 @@ function ListingDetailCard({product, handleRemoveFromLikes, handleAddToCart, onU
                             {showForm ? 'Hide Form' : 'Edit Listing'}
                         </button>
                             {showForm ? <EditForm handleChange={handleChange} handleSubmit={handleSubmit} formState={formState} /> : null}
+                        <button onClick={(e)=> onDeleteBtn(e, product)} className='btn-secondary m-2 p-2'>Delete Listing</button>
                     </div>
                     
                      

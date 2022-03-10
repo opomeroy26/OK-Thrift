@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/ItemCard.css'
 
-function ProfileItemCard({product, handleCardClick, productId, handleRemoveFromLikes, handleAddToCart}) {
+function ProfileItemCard({product, handleCardClick, productId, handleDeleteClick}) {
     const {name, description, price, image, size} = product
     return (
     <div onClick={()=> handleCardClick(product, productId)} className="card border-light col-4  p-2 m-2 item" >
@@ -13,8 +13,6 @@ function ProfileItemCard({product, handleCardClick, productId, handleRemoveFromL
        
        <p className="price">${price}</p>
        <div className ='row'>
-        {/* <button onClick={(e)=> handleAddToCart(e, product)} className="btn btn-secondary">Add to Cart  </button>
-        <button onClick={(e)=> handleRemoveFromLikes(e, product)} className='btn-secondary'>Remove From Likes</button> */}
        </div>
        
    </div> 

@@ -5,7 +5,7 @@ import ProfileItemCard from './ProfileItemCard'
 import LikeItemCard from './LikeItemCard'
 
 
-function ProfilePage({ myItems, setMyItems, onAddToInventory, onAddToListings, onCardClick, onListingCardClick, myLikedItems, onRemoveFromLikes, onAddToCart,  onLikedCardClick }){
+function ProfilePage({ myItems, setMyItems, onAddToInventory, onAddToListings, onCardClick, onListingCardClick, myLikedItems, onRemoveFromLikes, onAddToCart,  onLikedCardClick, setInventory, inventory  }){
 
     const initialFormState = {
         name: '',
@@ -56,11 +56,9 @@ function ProfilePage({ myItems, setMyItems, onAddToInventory, onAddToListings, o
             .then(setFormState(initialFormState))
             .then(setMyItems([...myItems, formState]))
         
-        
-            
-
         }   
     }
+
     
    
 
@@ -71,6 +69,7 @@ function ProfilePage({ myItems, setMyItems, onAddToInventory, onAddToListings, o
                 product={productObj}
                 handleCardClick = {onListingCardClick}
                 productId={productObj.id}
+                
             />
         
    ))
@@ -81,7 +80,6 @@ function ProfilePage({ myItems, setMyItems, onAddToInventory, onAddToListings, o
            <LikeItemCard
             key={productObj.id + productObj.name}
             product={productObj}
-            // handleLikedCardClick = {onLikedCardClick}
             handleCardClick = {onCardClick}
             handleRemoveFromLikes ={onRemoveFromLikes}
             handleAddToCart = {onAddToCart}
