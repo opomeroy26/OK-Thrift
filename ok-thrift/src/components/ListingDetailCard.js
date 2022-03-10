@@ -21,7 +21,7 @@ function ListingDetailCard({product, handleRemoveFromLikes, handleAddToCart, onU
       function handleSubmit(event,){
         console.log()
         event.preventDefault()
-        fetch(`http://localhost:3001/mylistings/${productId}`, {
+        fetch(`http://localhost:3000/mylistings/${productId}`, {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json',
@@ -74,7 +74,7 @@ function ListingDetailCard({product, handleRemoveFromLikes, handleAddToCart, onU
              </div>
          </div>
         </div>
-    
+    </div>
   )
 } else {
     return (
