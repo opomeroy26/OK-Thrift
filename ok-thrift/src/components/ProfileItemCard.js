@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/ItemCard.css'
 
 function ProfileItemCard({product, handleCardClick, productId, handleRemoveFromLikes, handleAddToCart}) {
     const {name, description, price, image, size} = product

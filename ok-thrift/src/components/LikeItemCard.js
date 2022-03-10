@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/ItemCard.css'
 
 function LikeItemCard({product, handleCardClick, handleRemoveFromLikes, handleAddToCart, handleLikedCardClick}) {
     const {name, description, price, image, size} = product
