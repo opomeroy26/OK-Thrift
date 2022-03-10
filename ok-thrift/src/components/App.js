@@ -28,14 +28,14 @@ function App() {
 
 
   useEffect(()=> {
-    fetch("http://localhost:3001/inventory")
+    fetch("http://localhost:3000/inventory")
     .then((resp) => resp.json())
     .then(setInventory)
   }, [])
 
 
   useEffect(()=> {
-    fetch('http://localhost:3001/mylistings')
+    fetch('http://localhost:3000/mylistings')
     .then((resp) => resp.json())
     .then(setMyItems)
   }, [])
@@ -135,14 +135,10 @@ function App() {
       }
     })
 
-
-
     function onClearSearch(product){
       setSearch("")
     }
 
-  
-  
     function onUpdateListing(updatedListing){
       const updatedListings = inventory.map(originalListing => {
         if (updatedListing.id === originalListing.id) {
@@ -158,12 +154,10 @@ function App() {
           return originalListing
         }
       })
-      //setInventory(updatedListings)
       setMyItems(updatedItems)
     }
 
     function onDeleteListing(product){
-      console.log("here i am on app page")
       setInventory(inventory.filter((listingItem) => listingItem !== product))
       setMyItems(myItems.filter((listingItem) => listingItem !== product))
     }
@@ -183,7 +177,6 @@ function App() {
       <Switch>
         <Route exact path="/">
           <HomePage 
-            
             inventory={searchedInventory} 
             onAddToCart = {onAddToCart}
             onCardClick = {onHomeCardClick}
@@ -212,72 +205,52 @@ function App() {
             onAddToLikes={onAddToLikes}
             inventory={inventory}
             myItems={myItems}
-            
           />
         </Route>
+
         <Route exact path="/cartdetail">
           <CartDetailPage 
             detail={cartItemDetail}
             onRemoveFromCart = {onRemoveFromCart}
             onAddToLikes={onAddToLikes}
             handleReturnToCart ={onReturnToCart}
-
-            
-            
           />
         </Route>
+
         <Route exact path='/listingdetail'>
           <ListingDetailPage
-          detail={listingDetail}
-          handleReturnToProfile = {onReturnToProfileClick}
-          onAddToCart = {onAddToCart}
-          onRemoveFromLikes={onRemoveFromLikes}
-
-          onUpdateListing={onUpdateListing}
-          productId={productId}
-
-          myLikedItems={myLikedItems}
-          myItems={myItems}
-          setMyItems={setMyItems}
-
-          inventory ={inventory}
-          setInventory={setInventory}
-
-          onDeleteListing ={onDeleteListing}
-
-
+            detail={listingDetail}
+            handleReturnToProfile = {onReturnToProfileClick}
+            onAddToCart = {onAddToCart}
+            onRemoveFromLikes={onRemoveFromLikes}
+            onUpdateListing={onUpdateListing}
+            productId={productId}
+            myLikedItems={myLikedItems}
+            myItems={myItems}
+            setMyItems={setMyItems}
+            inventory ={inventory}
+            setInventory={setInventory}
+            onDeleteListing ={onDeleteListing}
           />  
         </Route>
     
         <Route exact path="/profile">
           <ProfilePage 
-          onAddToInventory={onAddToInventory} 
-
-          onAddToListings={onAddToListings}
-
-          onCardClick={onCardClick}
-
-          // onCardClick={onProfileCardClick}
-
-          onListingCardClick={onListingCardClick}
-
-          setInventory={setInventory}
-          inventory={inventory}
-
-          
-          // onLikedCardClick ={onLikedCardClick}
-
-          myItems={myItems}
-          setMyItems={setMyItems}
-          myLikedItems={myLikedItems}
-          onRemoveFromLikes={onRemoveFromLikes}
-          onAddToCart = {onAddToCart}
+            onAddToInventory={onAddToInventory} 
+            onAddToListings={onAddToListings}
+            onCardClick={onCardClick}
+            onListingCardClick={onListingCardClick}
+            setInventory={setInventory}
+            inventory={inventory}
+            myItems={myItems}
+            setMyItems={setMyItems}
+            myLikedItems={myLikedItems}
+            onRemoveFromLikes={onRemoveFromLikes}
+            onAddToCart = {onAddToCart}
           />
         </Route>
       </Switch>
       </div>
-      
-      
     </div>
   );
 }

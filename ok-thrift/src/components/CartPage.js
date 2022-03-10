@@ -11,12 +11,11 @@ function CartPage({cart, onRemoveFromCart, handleReturnToHome, total, onAddToLik
                 handleAddToLikes = {onAddToLikes}
                 handleCartCardClick = {onCartCardClick}
             />
-        
     ))
     return (
         <div>
             <div className='row d-flex justify-content-center m-2 p-2' id='cart'>
-             {cartItem}
+                {cartItem}
             </div>
             <div className='row d-flex justify-content-center m-2 p-2'>
                 <button className='btn-primary'> Subtotal: ${total.toFixed(2)}</button>
@@ -25,7 +24,6 @@ function CartPage({cart, onRemoveFromCart, handleReturnToHome, total, onAddToLik
                 <button onClick={() => handleReturnToHome()} className="btn btn-secondary">Continue Shopping </button>
             </div>
         </div>
-
     )
 }
 
