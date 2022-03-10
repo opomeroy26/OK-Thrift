@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/ItemCard.css'
-function CartCard({product, handleRemoveFromCart}) {
+function CartCard({product, handleRemoveFromCart, handleAddToLikes}) {
     const {image, name, description, price, size} = product
     
     return (
@@ -13,7 +13,10 @@ function CartCard({product, handleRemoveFromCart}) {
                     <p className="card-text-item">{description}</p>
                     
                     <p className="price">${price}</p>
+                <div className='row'> 
                     <button onClick={(e)=>handleRemoveFromCart(e, product)} className="btn btn-secondary">Remove From Cart</button>
+                    <button onClick={(e)=> handleAddToLikes(e, product)} className='btn-secondary'>Add to Likes </button>
+                </div>
                 </div>
             </div>
        
