@@ -2,6 +2,7 @@ import { useState } from 'react'
 import '../styles/ProfilePage.css'
 import Form from './Form.js'
 import ProfileItemCard from './ProfileItemCard'
+import LikeItemCard from './LikeItemCard'
 
 function ProfilePage({ myItems, setMyItems, onAddToInventory, onCardClick, myLikedItems, onRemoveFromLikes, onAddToCart }){
     const initialFormState = {
@@ -71,7 +72,7 @@ function ProfilePage({ myItems, setMyItems, onAddToInventory, onCardClick, myLik
 
    const likedItem = myLikedItems.map((productObj)=> (
        <div>   
-           <ProfileItemCard 
+           <LikeItemCard
             key={productObj.id + productObj.name}
             product={productObj}
             handleCardClick = {onCardClick}
