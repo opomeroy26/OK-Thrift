@@ -1,3 +1,6 @@
+![Screen Shot 2022-03-11 at 9 56 58 AM](https://user-images.githubusercontent.com/95717751/157923560-b9721a3d-e3ef-4154-bad5-d928fd67450e.png)
+
+
 # About this Project
 
 OK Thrift is an online marketplace where users can buy and sell clothing items. 
