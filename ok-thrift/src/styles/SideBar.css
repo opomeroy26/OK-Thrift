@@ -3,8 +3,13 @@ h1 {
     
 }
 
+hr {
+    margin: none;
+    border-radius: 45px;
+}
+
 .toph1{
-margin-top:10px;
+margin-top:15px;
 }
 
 .bottomh1{
