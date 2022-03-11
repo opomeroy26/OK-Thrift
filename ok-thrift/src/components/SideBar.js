@@ -38,7 +38,7 @@ function SideBar({onSearch, sortBy, onSortBy, onClearSearch}){
                     </NavLink>
                     </li>
                     <button 
-                        className='btn-secondary' 
+                        className='btn-secondary m-3' 
                         type='button' 
                         data-bs-toggle='collapse' 
                         data-bs-target='#filterandsearch' 
