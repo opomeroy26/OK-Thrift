@@ -2,7 +2,7 @@ import ItemCard from './ItemCard.js';
 import React from "react";
 
 
-function HomePage({inventory, onAddToCart, onCardClick, onAddToLikes, myItems}){
+function HomePage({inventory, onAddToCart, onCardClick, onAddToLikes, myItems, handleClearSearch}){
     const product = inventory.map((productObj)=> (
         
             <ItemCard 
@@ -41,8 +41,11 @@ function HomePage({inventory, onAddToCart, onCardClick, onAddToLikes, myItems}){
     )
     }
     else return (
-        <div className='row content  d-flex justify-content-center m-2 p-2'>
-            <h4>Sorry, no dice</h4>
+        <div className='row content d-flex justify-content m-2 p-2'>
+            <h4>Sorry, we couldn't find any results</h4>
+            <div className=' row content d-flex justify-content m-2 p-2 '>
+                <button onClick={()=>handleClearSearch()} className='btn-primary'> Return to Home </button>
+            </div>
         </div>
     )
 }
