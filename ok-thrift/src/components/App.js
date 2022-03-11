@@ -195,6 +195,7 @@ function App() {
             onCardClick = {onHomeCardClick}
             onAddToLikes ={onAddToLikes}
             myItems = {searchedMyItems}
+            handleClearSearch={onClearSearch}
           />
         </Route>
       
