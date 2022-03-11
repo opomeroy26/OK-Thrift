@@ -135,6 +135,19 @@ function App() {
       }
     })
 
+    const searchedMyItems = myItems
+      .filter((product)=>
+       product.description.toLowerCase().includes(search.toLowerCase()) || product.name.toLowerCase().includes(search.toLowerCase()) 
+      )
+      .filter((product) => {
+        if (sortBy === "All Sizes") {
+          return ([...inventory])
+  
+        } else {
+          return (product.size.toLowerCase().includes(sortBy.toLowerCase()))
+        }
+      })
+
     function onClearSearch(product){
       setSearch("")
     }
@@ -181,7 +194,7 @@ function App() {
             onAddToCart = {onAddToCart}
             onCardClick = {onHomeCardClick}
             onAddToLikes ={onAddToLikes}
-            myItems = {myItems}
+            myItems = {searchedMyItems}
           />
         </Route>
       
