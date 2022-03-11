@@ -3,7 +3,7 @@ import '../styles/CartPage.css'
 
 function CartPage({cart, onRemoveFromCart, handleReturnToHome, total, onAddToLikes, onCartCardClick}){
     const cartItem = cart.map((productObj)=> (
-        
+        <div className='col-3 m-3 p-3'>
             <CartCard
                 key={productObj.id + productObj.name}
                 product={productObj}
@@ -11,10 +11,11 @@ function CartPage({cart, onRemoveFromCart, handleReturnToHome, total, onAddToLik
                 handleAddToLikes = {onAddToLikes}
                 handleCartCardClick = {onCartCardClick}
             />
+        </div>
     ))
     return (
         <div>
-            <div id='cart'>
+            <div id='cart' className='row justify-content-center mb-2 pb-2 align-self-center'>
                 {cart.length ? 
                     cartItem : 
                     <div className='row justify-content-center mb-2 pb-2 align-self-center'>
@@ -35,8 +36,9 @@ function CartPage({cart, onRemoveFromCart, handleReturnToHome, total, onAddToLik
                 }
                 
             </div>
-            <hr id='horizontalrule' classsName='m-4 p-4'/>
             <div className='row d-flex justify-content-center m-2 p-2'>
+            <hr id='horizontalrule' classsName='m-4 p-4'/>
+            
                 <button className='btn-primary'> Subtotal: ${total.toFixed(2)}</button>
             </div>
             <div className='row d-flex justify-content-center m-2 p-2' id='cart'>
