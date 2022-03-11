@@ -30,8 +30,8 @@ function ItemCard({product, handleAddToCart, handleCardClick, handleAddToLikes, 
                    <p className="price">${price}</p>
                    
                    <div className='row'> 
-                       <button onClick={(e)=> handleAddToCart(e, product)} className="btn btn-secondary">Add to Cart  </button>
-                       <button onClick={(e)=> handleAddToLikes(e, product)} className='btn-secondary'> Add to Likes </button>
+                       <button onClick={(e)=> handleAddToCart(e, product)} className="btn btn-secondary m-1 p-1">Add to Cart  </button>
+                       <button onClick={(e)=> handleAddToLikes(e, product)} className='btn-secondary m-1 p-1'> Add to Likes </button>
                    </div>
        
                </div> 

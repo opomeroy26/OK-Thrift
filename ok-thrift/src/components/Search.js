@@ -20,7 +20,7 @@ function Search({ onSearch }) {
                 value={search}
                 onChange={(e)=>setSearch(e.target.value)}
             />
-            <button className='btn-primary' type="submit">Search</button>
+            <button className='btn-1 m-2 p-2' type="submit">Search</button>
         
         </form>
     );

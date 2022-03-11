@@ -98,22 +98,23 @@ function ProfilePage({ myItems, setMyItems, onAddToInventory, onAddToListings, o
     
     return (
             <div className='container p-3 m-3 ' id='profile'>
-                <img className ='rounded-circle  border profile-image'
+                <img className ='rounded-circle  border profile-image m-2 p-2'
                     src ='https://static9.depositphotos.com/1009634/1075/v/450/depositphotos_10757374-stock-illustration-no-user-profile-picture.jpg' 
                     alt='profile'>
                 </img>
-                <h3 id='username'>John Doe</h3> {/* If we get to authenticate should be dynamic */}
+                <h3 id='username' className='m-2 p-2'>John Doe</h3> {/* If we get to authenticate should be dynamic */}
+               
                 <h5 id='bio' className='p-2 m-2'>  
                     I sell sick clothes, check out my listings!
                 </h5> {/*Should also be dynamic */}
-                
-                <button className='btn-secondary' 
+                <hr id='horizontalrule'/>
+                <button className='btn-secondary m-2 p-2' 
                         onClick={handleShowLikes}
                         > 
                         {showLikes ? 'Hide Likes': 'Show Likes'} 
                 </button>
                 
-                <button className="btn btn-secondary" 
+                <button className="btn btn-secondary m-2 p-2" 
                         onClick={handleShowForm}
                         >
                         {showForm ? 'Hide Form' : 'Add New Listing'}

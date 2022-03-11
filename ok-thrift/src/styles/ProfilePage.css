@@ -12,6 +12,7 @@
 .profile-image {
   width:400px;
   height:400px;
+  box-shadow: 0px 0px 10px #702963;
 }
 
 input [type=text] {
@@ -45,4 +46,11 @@ input [type=text] {
     transform: translateY(-7px);
   }
 
+  #horizontalrule {
+   border: 10px #702963 !important;
+   background-color: #702963 !important;
+   height: 10px;
+   border-radius: 10px;
+   opacity: .5;
+  }
   

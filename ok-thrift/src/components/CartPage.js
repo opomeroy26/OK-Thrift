@@ -15,8 +15,10 @@ function CartPage({cart, onRemoveFromCart, handleReturnToHome, total, onAddToLik
     return (
         <div>
             <div className='row d-flex justify-content-center m-2 p-2' id='cart'>
-                {cartItem}
+                {cart.length ? cartItem : <h4 className='col d-flex justify-content-center m-2 p-2'>Cart is empty <br />:&#40; </h4>}
+                {}
             </div>
+            <hr id='horizontalrule'/>
             <div className='row d-flex justify-content-center m-2 p-2'>
                 <button className='btn-primary'> Subtotal: ${total.toFixed(2)}</button>
             </div>

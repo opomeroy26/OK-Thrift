@@ -1,6 +1,36 @@
+h1 {
+    text-shadow: 2px 2px 0px #702963;
+    
+}
+
+.toph1{
+margin-top:10px;
+}
+
+.bottomh1{
+    margin-bottom:10px;
+}
+#logohr {
+    width: 120px;
+    margin-left:20px;
+    margin-right:20px;
+    border: 2px #702963;
+    background-color: #702963;
+    height: 5px !important;
+}
+
 .wrapper {
     
     width: 100%;
+}
+
+#logo {
+    margin-top:15px;
+    height: 160px;
+    width: 160px;
+    background-color: #9E7BB5;
+    border-radius: 50%;
+    display: inline-block;
 }
 
 #sidebar {
@@ -12,7 +42,7 @@
     top:0;
     height: auto;
     z-index: 999;
-    background: #7386D5;
+    background: #eae6f4;
     color: #fff;
     height:100vh !important;
     text-align: center;
@@ -22,6 +52,7 @@
     text-align: center;
 
 }
+
 
 .btn-secondary {
     width: 140px;

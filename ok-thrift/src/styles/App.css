@@ -2,9 +2,26 @@
     margin-left: 200px;
     padding: 1px 16px;
     height: 1000px;
+    
 }
 
 #maindiv {
     background-color: aqua;
+}
+
+.vl {
+  background-color:#BE93D4;
+  height:100vh;
+  width: 15px;
+  padding: none !important;
+  margin-right: none !important;  
+  margin-left: 185px;
+  position:fixed;
+  opacity:.75;
+}
+
+.container-fluid {
+  
+  
 }
 
