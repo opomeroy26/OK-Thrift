@@ -32,11 +32,17 @@ function HomePage({inventory, onAddToCart, onCardClick, onAddToLikes, myItems}){
     />
 
     ))
-    
+    if (inventory.length !==0){
     return (
         <div className='row content  d-flex justify-content-center m-2 p-2 ' id='items' >
             {product}
             {myProduct}
+        </div>
+    )
+    }
+    else return (
+        <div className='row content  d-flex justify-content-center m-2 p-2'>
+            <h4>Sorry, no dice</h4>
         </div>
     )
 }
