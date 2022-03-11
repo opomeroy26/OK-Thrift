@@ -42,7 +42,7 @@ function HomePage({inventory, onAddToCart, onCardClick, onAddToLikes, myItems, h
     }
     else return (
         <div className='row content d-flex justify-content m-2 p-2'>
-            <h4>Sorry, we couldn't find any results</h4>
+            <h4>Sorry, that item is currently not listed</h4>
             <div className=' row content d-flex justify-content m-2 p-2 '>
                 <button onClick={()=>handleClearSearch()} className='btn-primary'> Return to Home </button>
             </div>
