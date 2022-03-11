@@ -13,7 +13,7 @@ function LikeItemCard({product, handleCardClick, handleRemoveFromLikes, handleAd
        
        <p className="price">${price}</p>
       <div className ='row'>
-        <button onClick={(e)=> handleAddToCart(e, product)} className="btn btn-secondary">Add to Cart  </button>
+        <button onClick={(e)=> handleAddToCart(e, product)} className="btn btn-secondary">Add to Cart</button>
         <button onClick={(e)=> handleRemoveFromLikes(e, product)} className='btn-secondary'>Remove From Likes</button>
       </div> 
    </div> 
