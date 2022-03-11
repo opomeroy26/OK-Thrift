@@ -63,7 +63,7 @@ function ProfilePage({ myItems, setMyItems, onAddToInventory, onAddToListings, o
    
 
    const myItemsCard = myItems.map((productObj) => (
-        <div className='col-3 mx-4 px-4'>
+        <div className='col '>
             <ProfileItemCard 
                 key={productObj.id + productObj.name}
                 product={productObj}
@@ -76,7 +76,7 @@ function ProfilePage({ myItems, setMyItems, onAddToInventory, onAddToListings, o
     
 
    const likedItem = myLikedItems.map((productObj)=> (
-        <div className='col-3 mx-4 px-4'>
+        <div className=' col '>
            <LikeItemCard
             key={productObj.id + productObj.name}
             product={productObj}
