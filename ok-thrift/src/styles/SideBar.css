@@ -12,9 +12,7 @@ hr {
 margin-top:15px;
 }
 
-.bottomh1{
-    margin-bottom:10px;
-}
+
 #logohr {
     width: 120px;
     margin-left:20px;
@@ -22,6 +20,8 @@ margin-top:15px;
     border: 2px #702963;
     background-color: #702963;
     height: 5px !important;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .wrapper {

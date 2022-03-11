@@ -23,7 +23,7 @@ function Form({handleSubmit, handleChange, formState}) {
                             </div>
                             
                             <div className='form-row'>   
-                                <div className='col-6 no-gutters'> 
+                                <div className='col no-gutters'> 
                                     <div className='form-group'>
                                         <label htmlFor='name' className='label'>Name</label>
                                         <input
@@ -39,8 +39,8 @@ function Form({handleSubmit, handleChange, formState}) {
                                     </div>  
                                 </div>
                             </div>
-                            <div className='form-row'>    
-                                <div className='col-4'>
+                            <div className='row'>    
+                                <div className='col-6'>
                                     <div className='form-group'>
                                         <label htmlFor='price' className='label'>Price</label>
                                         <input
@@ -54,7 +54,7 @@ function Form({handleSubmit, handleChange, formState}) {
                                         </input>
                                     </div>
                                 </div>
-                                <div className='col-4'>
+                                <div className='col-6'>
                                     <div className='form-group'>
                                         <label htmlFor='size' className='label'>Size</label>
                                         <select
