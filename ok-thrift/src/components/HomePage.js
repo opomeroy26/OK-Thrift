@@ -37,14 +37,18 @@ function HomePage({inventory, onAddToCart, onCardClick, onAddToLikes, myItems, h
         <div className='row content  d-flex justify-content-center m-2 p-2 ' id='items' >
             {product}
             {myProduct}
-        </div>
+    </div>
     )
     }
     else return (
-        <div className='row content d-flex justify-content m-2 p-2'>
-            <h4>Sorry, that item is currently not listed</h4>
-            <div className=' row content d-flex justify-content m-2 p-2 '>
-                <button onClick={()=>handleClearSearch()} className='btn-primary'> Return to Home </button>
+        <div>
+            <div className='row d-flex justify-content-center m-2 p-2' id='cart'>
+                <h4 className='col d-flex justify-content-center m-2 p-2'>Sorry, no results found</h4>
+                {}
+            </div>
+            <hr id='horizontalrule'/>
+            <div className='row d-flex justify-content-center m-2 p-2' id='cart'>
+                <button onClick={() => handleClearSearch()} className="btn btn-secondary">Back to home</button>
             </div>
         </div>
     )
