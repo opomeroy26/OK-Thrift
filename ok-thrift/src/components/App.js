@@ -177,6 +177,7 @@ function App() {
 
 
   return (
+    <div   >
     <div  className="container-fluid "  >
       
       <SideBar 
@@ -265,6 +266,7 @@ function App() {
         </Route>
       </Switch>
       </div>
+    </div>
     </div>
   );
 }

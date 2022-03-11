@@ -29,16 +29,10 @@
     height: 10px;
     border-radius: 10px;
     opacity: 1;
+    
    }
 
-   #logoForCartPage {
-    margin-top:15px;
-    height: 160px;
-    width: 160px;
-    background-color: #9E7BB5;
-    border-radius: 50%;
-    display: inline-block;
-   }
+  
 
    #cartlogohr {
     width: 120px;
@@ -49,15 +43,37 @@
     height: 5px !important;
    }
 
-   .toph1{
-    margin-top:10px;
-    }
-    
-    .bottomh1{
-        margin-bottom:10px;
-    }
+   #bigLogoHr {
+    width: 250px;
+    margin-left:10px;
+    margin-right:10px;
+    border: 2px #702963;
+    background-color: #702963;
+    height: 10px !important;
+   }
+
+   #bigTopH1 {
+        font-size: 75px;
+        
+        
+   }
+   #bigBottomH1 {
+        font-size: 75px;
+        
+   }
 
     h1 {
         text-shadow: 2px 2px 0px #702963;
+        color:#fff;
+        
+    }
+
+    #bigLogo {
+        
+        height: 320px;
+        width: 320px;
+        background-color: #9E7BB5;
+        border-radius: 50%;
+        text-align:center;
         
     }

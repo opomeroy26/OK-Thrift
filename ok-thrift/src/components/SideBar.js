@@ -19,7 +19,7 @@ function SideBar({onSearch, sortBy, onSortBy, onClearSearch}){
         <div>
             <nav id='sidebar' >
                 <div id='logo' className='mb-5 pb-5'>
-                    <h1 className='toph1'> <b>OK</b> </h1>
+                    <h1 className='toph1 mt-3'> <b>OK</b> </h1>
                     <hr  id='logohr'/>
                     <h1 className='bottomh1'> <b>Thrift</b> </h1>
                 </div>
