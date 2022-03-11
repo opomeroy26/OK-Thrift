@@ -24,7 +24,7 @@ function EditForm({handleSubmit, handleChange, formState}) {
                             </div>
                             
                             <div className='form-row'>   
-                                <div className='col-6 no-gutters'> 
+                                <div className='col no-gutters'> 
                                     <div className='form-group'>
                                         <label htmlFor='name' className='label'>Name</label>
                                         <input
@@ -40,8 +40,8 @@ function EditForm({handleSubmit, handleChange, formState}) {
                                     </div>  
                                 </div>
                             </div>
-                            <div className='form-row'>    
-                                <div className='col-4'>
+                            <div className='row'>    
+                                <div className='col-6'>
                                     <div className='form-group'>
                                         <label htmlFor='price' className='label'>Price</label>
                                         <input
@@ -55,7 +55,7 @@ function EditForm({handleSubmit, handleChange, formState}) {
                                         </input>
                                     </div>
                                 </div>
-                                <div className='col-4'>
+                                <div className='col-6'>
                                     <div className='form-group'>
                                         <label htmlFor='size' className='label'>Size</label>
                                         <select
@@ -102,7 +102,7 @@ function EditForm({handleSubmit, handleChange, formState}) {
                                 </div>
                             </div>
                             
-                            <button type='submit' className='btn btn-secondary' id='form-button'> Edit Listing </button>
+                            <button type='submit' className='btn btn-secondary m-3 p-3' id='form-button'> Edit Listing </button>
                         </form>
                     </div>
     

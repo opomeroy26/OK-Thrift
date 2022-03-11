@@ -63,7 +63,7 @@ function ProfilePage({ myItems, setMyItems, onAddToInventory, onAddToListings, o
    
 
    const myItemsCard = myItems.map((productObj) => (
-        
+        <div className='col-3 mx-4 px-4'>
             <ProfileItemCard 
                 key={productObj.id + productObj.name}
                 product={productObj}
@@ -71,12 +71,12 @@ function ProfilePage({ myItems, setMyItems, onAddToInventory, onAddToListings, o
                 productId={productObj.id}
                 
             />
-        
+        </div>
    ))
     
 
    const likedItem = myLikedItems.map((productObj)=> (
-         
+        <div className='col-3 mx-4 px-4'>
            <LikeItemCard
             key={productObj.id + productObj.name}
             product={productObj}
@@ -84,6 +84,7 @@ function ProfilePage({ myItems, setMyItems, onAddToInventory, onAddToListings, o
             handleRemoveFromLikes ={onRemoveFromLikes}
             handleAddToCart = {onAddToCart}
         />
+        </div> 
        
    )) 
     function handleShowForm() {
@@ -98,7 +99,7 @@ function ProfilePage({ myItems, setMyItems, onAddToInventory, onAddToListings, o
     
     return (
             <div className='container p-3 m-3 ' id='profile'>
-                <img className ='rounded-circle  border profile-image m-2 p-2'
+                <img className ='rounded-circle profile-image m-2 p-2'
                     src ='https://static9.depositphotos.com/1009634/1075/v/450/depositphotos_10757374-stock-illustration-no-user-profile-picture.jpg' 
                     alt='profile'>
                 </img>

@@ -72,8 +72,9 @@ function ListingDetailCard({product, handleRemoveFromLikes, handleAddToCart, onU
                                 onClick={handleShowForm}> 
                                 {showForm ? 'Hide Form' : 'Edit Listing'}
                             </button>
-                            {showForm ? <EditForm handleChange={handleChange} handleSubmit={handleSubmit} formState={formState} /> : null}
                             <button onClick={(e)=> onDeleteBtn(e, product)} className='btn-secondary m-2 p-2'>Delete Listing</button>
+                            {showForm ? <EditForm handleChange={handleChange} handleSubmit={handleSubmit} formState={formState} /> : null}
+                            
                         </div>
                     </div>
                 </div>
