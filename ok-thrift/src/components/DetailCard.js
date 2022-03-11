@@ -39,8 +39,8 @@ function DetailCard({product, handleAddToCart, handleCardClick, handleAddToLikes
                     <h6 className='card-subtitle text-muted'>Size: {size}</h6>
                     <p className="card-text">{description}</p>
                     <p className="card-text">${price}</p>
-                    <button onClick={(e)=> handleAddToCart(e, product)} className="btn btn-secondary">Add to Cart 🛒 </button> 
-                    <button onClick={(e)=> handleAddToLikes(e, product)} className='btn-secondary'> Add to Likes </button>
+                    <button onClick={(e)=> handleAddToCart(e, product)} className="btn btn-secondary m-1 p-1">Add to Cart 🛒 </button> 
+                    <button onClick={(e)=> handleAddToLikes(e, product)} className='btn-secondary m-1 p-1'> Add to Likes </button>
                 </div>
             </div>
         </div>

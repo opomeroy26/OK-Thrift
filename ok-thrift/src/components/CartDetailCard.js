@@ -16,8 +16,8 @@ function CartDetailCard({product, handleAddToLikes, handleRemoveFromCart}) {
                     <p className="card-text">{description}</p>
                     <p className="card-text">${price}</p>
                     <div className='row'>
-                        <button onClick={(e)=> handleAddToLikes(e, product)} className='btn-secondary'> Add to Likes </button>
-                        <button onClick={(e)=> handleRemoveFromCart(e, product)} className='btn-secondary'> Remove From Cart </button>
+                        <button onClick={(e)=> handleAddToLikes(e, product)} className='btn-secondary m-1 p-1'> Add to Likes </button>
+                        <button onClick={(e)=> handleRemoveFromCart(e, product)} className='btn-secondary m-1 p-1'> Remove From Cart </button>
                     </div>
                 </div>
             </div>

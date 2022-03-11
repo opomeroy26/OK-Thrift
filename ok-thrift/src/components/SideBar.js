@@ -16,9 +16,14 @@ function SideBar({onSearch, sortBy, onSortBy, onClearSearch}){
     
     return (
         
-            
+        <div>
             <nav id='sidebar' >
-                <h1 >OK Thrift</h1>
+                <div id='logo' className='mb-5 pb-5'>
+                    <h1 className='toph1'> <b>OK</b> </h1>
+                    <hr  id='logohr'/>
+                    <h1 className='bottomh1'> <b>Thrift</b> </h1>
+                </div>
+                
                 <ul className='list-unstyled components' id='homeSubmenu'>
                     <li>
                     <NavLink  to="/" exact activeStyle = {{background: "white", color:"#7386D5"}} className='btn btn-secondary m-3'>
@@ -60,6 +65,7 @@ function SideBar({onSearch, sortBy, onSortBy, onClearSearch}){
                 </ul>
             </nav>
             
+        </div>    
         
     )
 }

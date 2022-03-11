@@ -177,7 +177,7 @@ function App() {
 
 
   return (
-    <div className="container-fluid "  >
+    <div  className="container-fluid "  >
       
       <SideBar 
         onSearch={setSearch}
@@ -185,8 +185,8 @@ function App() {
         onSortBy = {setSortBy}
         onClearSearch = {onClearSearch}
       /> 
-      
-      <div className='content row'  style={{ marginLeft: '200px', marginRight: '25px' }}>
+      <div className='vl'></div>
+      <div className='content row'   style={{ marginLeft: '200px', marginRight: '25px' }}>
       <Switch>
         <Route exact path="/">
           <HomePage 
