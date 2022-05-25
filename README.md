@@ -18,7 +18,7 @@ Kade Esterline
 Olivia Pomeroy
 Github: https://github.com/opomeroy26
 
-LinkedIn: [https://www.linkedin.com/in/olivia-pomeroy/]
+LinkedIn: https://www.linkedin.com/in/olivia-pomeroy/
 
 # Getting Started with Create React App
 
