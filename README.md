@@ -1,19 +1,28 @@
 ![Screen Shot 2022-03-11 at 9 56 58 AM](https://user-images.githubusercontent.com/95717751/157923560-b9721a3d-e3ef-4154-bad5-d928fd67450e.png)
 
 
-# About this Project
+# OK Thrift
 
 OK Thrift is an online marketplace where users can buy and sell clothing items. 
+
+## User Stories
+Users are able to view items posted for sell, filter by size and item names, and add to shopping cart or like for later. On a Users profile page they can see their liked items and post an item they would like to sell. A user has an option to edit or delete their posting. Users can go to their shopping cart and remove items or continue shopping
+
+## Future Ideas
+Authenification will be implemented for users to login to their account. Users can direct message sellers and will be able to check out from their cart.
 
 # Contributors
 
 Kade Esterline
 
 Olivia Pomeroy
+Github: https://github.com/opomeroy26
+
+LinkedIn: https://www.linkedin.com/in/olivia-pomeroy-367578176/
 
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). 
 
 ## Available Scripts
 
