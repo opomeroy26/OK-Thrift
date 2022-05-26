@@ -8,6 +8,9 @@ OK Thrift is an online marketplace where users can buy and sell clothing items.
 ## User Stories
 Users are able to view items posted for sell, filter by size and item names, and add to shopping cart or like for later. On a Users profile page they can see their liked items and post an item they would like to sell. A user has an option to edit or delete their posting. Users can go to their shopping cart and remove items or continue shopping
 
+## Walkthrough
+[Video Walkthrough](https://www.loom.com/share/9260b88cbbe84e8583834989e701f05e)
+
 ## Future Ideas
 Authenification will be implemented for users to login to their account. Users can direct message sellers and will be able to check out from their cart.
 
